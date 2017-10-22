@@ -11,8 +11,9 @@
   <!-- Load the page styles. -->
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="js/jquery-modal/jquery.modal.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
@@ -52,29 +53,51 @@
     <div style="clear: both;"></div>
 
     <div class="row">
-      <div id="workExperience" class="gray">
+      <section id="workExperience" class="gray">
         <h2>Work Experience</h2>
-      </div>
-      <div id="projects" class="col-md-12">
+      </section>
+      <section id="projects" class="col-md-12">
         <h2>Projects</h2>
-      </div>
-      <div id="education" class="gray">
+      </section>
+      <section id="education" class="gray">
         <h2>Education</h2>
-      </div>
+      </section>
+      <section id="skills-graph">
+        <h2>Habilidades</h2>
+        <div id="modal-otherkill">
+          <img src="images/branding/angularjs.svg" alt="angularjs" class="img-responsive img-rounded col-md-3" title="Angular">
+          <img src="images/branding/es6.svg" alt="es6" class="img-responsive img-rounded col-md-3" title="Ecma Script 6">
+          <img src="images/branding/grunt.svg" alt="grunt" class="img-responsive img-rounded col-md-3" title="Gruntjs">
+          <img src="images/branding/nodejs.svg" alt="nodejs" class="img-responsive img-rounded col-md-3" title="Nodejs">
+          <img src="images/branding/jquery.svg" alt="jquery" class="img-responsive img-rounded col-md-3" title="Jquery">
+          <img src="images/branding/spring.svg" alt="spring" class="img-responsive img-rounded col-md-3" title="Spring MVC">
+          <img src="images/branding/typescript-and-javascript.svg" alt="typescript-and-javascript" class="img-responsive img-rounded col-md-6"
+            title="typescript-and-javascript">
+          <img src="images/branding/postgres.svg" alt="postges" class="img-responsive img-rounded col-md-3" title="postges">
+          <img src="images/branding/cassandra.svg" alt="cassandra" class="img-responsive img-rounded col-md-3" title="cassandra">
+        </div>
+      </section>
     </div>
 
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
-    <div id="lets-connect" class="dark-gray">
-      <h3 class="orange center-text">Let's Connect</h3>
-      <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
   </div>
+
+  <footer id="lets-connect" class="footer-bg">
+    <h3 class="orange white-text center-text">Let's Connect</h3>
+    <ul id="footerContacts" class="flex-box has-padding">
+    </ul>
+  </footer>
+
 
   <!--Jquery Library-->
   <script src="js/jQuery.js"></script>
+
+  <!--Chart.js-->
+  <script src="js/chartjs/Chart.min.js"></script>
+  <!--jquery Moda-->
+  <script src="js/jquery-modal/jquery.modal.min.js"></script>
 
   <!-- helper.js -->
   <script src="js/helper.js"></script>

@@ -2,7 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body {
-  background-color: #E4DFDA;
+  /*background-color: #E4DFDA;*/
+  background-image: linear-gradient(to bottom, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
   box-sizing: border-box;
   font-family: Raleway, Verdana, Arial, sans-serif;
 }
@@ -11,12 +12,26 @@ body {
   overflow: auto;
 }
 
-#projects {
+#projects, #skills-graph {
   background-color: #ede7ee;
 }
 
 #workExperience a {
   font-size: 20px;
+}
+
+#topContacts li a {
+  margin-top: 0;
+  text-decoration: none;
+}
+
+#modal-otherkill {
+  display: none;
+}
+
+#modal-otherkill img {
+  width: 140px;
+  height: 140px;
 }
 
 /*navBar*/
@@ -216,20 +231,21 @@ header span {
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #FF7700;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #FF7700;
 }
 
 .white-text {
   font-weight: bold;
   color: #fff;
+  vertical-align: super;
 }
 
 .gray {
-  background-color: #E4DFDA;
+ 
   padding-bottom: 10px;
   clear: both;
 }
@@ -239,8 +255,12 @@ header span {
 }
 
 #header {
-  background: url('../images/background.jpeg');
-  background-size: cover;
+  background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-size: cover;*/
   clear: right;
   width: 96%;
   margin: auto;
@@ -289,6 +309,16 @@ span {
   text-align: center;
 }
 
+/*footer*/
+.has-padding {
+    padding: 55px 0;
+ }
+
+.footer-bg {
+    background-color: #414A52
+}
+
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -300,6 +330,9 @@ span {
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
+  }
+  .projectpic {
+    max-width: 100%;
   }
 }
 

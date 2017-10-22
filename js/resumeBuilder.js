@@ -1,3 +1,44 @@
+function loadSkillGraph() {
+
+    $('#skills-graph').append(HTMLGraphSkills, HTMLButtonOthersSkills);
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ["HTML5", "CSS3", "Javascript", "Bootstrap", "Java Web"],
+            datasets: [{
+                label: 'Nível de Habilidade',
+                data: [9, 9, 9, 8, 8, 0, 10],
+                backgroundColor: [
+                    '#FF6500',
+                    '#3F88C5',
+                    '#003F91',
+                    '#772D8B',
+                    "#4357AD",
+                    '#FF82A9',
+                    '#ED254E',
+                ],
+            }]
+        },
+        options: {
+            barPercentage: 0.1,
+        }
+    });
+};
+
+function getModalOthersSkills() {
+    $('#btnOtherSkill').click(function (event) {
+        $("#modal-otherkill").show();
+        $("#modal-otherkill").modal({
+            fadeDuration: 300,
+            fadeDelay: 1.75
+        });
+
+        return false;
+    });
+};
+
 var bio = {
     name: 'Joelton dos Santos Matos',
     role: 'Web Developer',
@@ -6,7 +47,7 @@ var bio = {
         email: 'joeltonmatos@gmail.com',
         github: 'https://github.com/joeltonmats',
         twitter: 'https://twitter.com/joeltonmatos',
-        location: 'Campinas-SP'
+        location: 'https://goo.gl/5fKeiM'
     },
     welcomeMessage: 'Se a oportunidade não tocar, construa uma porta - Milton Berle',
     skills: ["HTML5", "CSS3", "Javascript", "Java"],
@@ -20,11 +61,19 @@ var bio = {
 
         //contacts
         $('#topContacts').append(
-            HTMLmobile.replace('%data%', bio.contacts.mobile),
-            HTMLmobile.replace('%data%', bio.contacts.email),
-            HTMLgithub.replace('%data%', bio.contacts.github),
-            HTMLtwitter.replace('%data%', bio.contacts.twitter),
-            HTMLlocation.replace('%data%', bio.contacts.location)
+            HTMLmobile.replace('%urlValue%', '#').replace('%data%', bio.contacts.mobile),
+            HTMLemail.replace('%urlValue%', '#').replace('%data%', bio.contacts.email),
+            HTMLgithub.replace('%urlValue%', bio.contacts.github).replace('%data%', '/joeltonmats'),
+            HTMLtwitter.replace('%urlValue%', bio.contacts.twitter).replace('%data%', '@joeltonmatos'),
+            HTMLlocation.replace('%urlValue%', bio.contacts.location).replace('%data%', 'Campinas-SP')
+        );
+
+        $('#footerContacts').append(
+            HTMLmobile.replace('%urlValue%', '#').replace('%data%', bio.contacts.mobile),
+            HTMLemail.replace('%urlValue%', '#').replace('%data%', bio.contacts.email),
+            HTMLgithub.replace('%urlValue%', bio.contacts.github).replace('%data%', '/joeltonmats'),
+            HTMLtwitter.replace('%urlValue%', bio.contacts.twitter).replace('%data%', '@joeltonmatos'),
+            HTMLlocation.replace('%urlValue%', bio.contacts.location).replace('%data%', 'Campinas-SP')
         );
 
         $('#header').append(
@@ -185,6 +234,8 @@ var projects = {
 
 
 
+
+
     }
 
 };
@@ -210,10 +261,9 @@ function begin() {
     work.display();
     projects.display();
     education.display();
+    loadSkillGraph();
+    getModalOthersSkills();
 }
 
 
 begin();
-
-
-

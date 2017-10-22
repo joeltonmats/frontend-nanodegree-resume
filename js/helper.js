@@ -1,13 +1,13 @@
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><a href="#" target="_blank"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li></a>';
+var HTMLmobile = '<li class="flex-item"><a href="%urlValue%"><span class="orange-text"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLemail = '<li class="flex-item"><a href="%urlValue%"><span class="orange-text"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLtwitter = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLgithub = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLblog = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text">blog</span><span class="white-text">%data%</span></li><a>';
+var HTMLlocation = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -26,7 +26,7 @@ var HTMLprojectStart = '<div class="project-entry col-md-12"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%" class="col-md-3">';
+var HTMLprojectImage = '<img src="%data%" class="col-md-3 projectpic">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -41,6 +41,9 @@ var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
+
+var HTMLGraphSkills = '<div class="col-md-10"><canvas id="myChart" width="50" height="14"></canvas></div>';
+var HTMLButtonOthersSkills = '<div class="col-md-2"><button class="btn btn-sm btn-primary" id="btnOtherSkill">Outras Habilidades</button></div>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
