@@ -19,7 +19,7 @@ p {
 }
 
 a {
-  color: #012c40;
+  color: #1ca5b8;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -219,7 +219,7 @@ h5 {
 /*span values*/
 
 .date-text {
-  color: #1ca5b8;
+  color: #ff404c;
   font-style: italic;
   font-size: 14px;
   line-height: 16px;
@@ -227,7 +227,7 @@ h5 {
 }
 
 .location-text {
-  color: #1ca5b8;
+  color: #ff404c;
   font-style: italic;
   font-size: 14px;
   line-height: 16px;
