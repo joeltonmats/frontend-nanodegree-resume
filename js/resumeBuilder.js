@@ -89,7 +89,6 @@ var bio = {
                 $('#skills').append(HTMLskills.replace('%data%', skill));
             }
         }
-
     }
 };
 

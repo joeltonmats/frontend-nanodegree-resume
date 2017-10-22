@@ -2,36 +2,104 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body {
-  /*background-color: #E4DFDA;*/
-  background-image: linear-gradient(to bottom, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+  background-color: #fff;
   box-sizing: border-box;
   font-family: Raleway, Verdana, Arial, sans-serif;
 }
 
+section {
+  padding-bottom: 15px;
+  clear: both;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+
+a {
+  color: #012c40;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  padding: 10px;
+}
+
+span {
+  padding: 5px;
+}
+
+/*headers*/
+
+h1 {
+  color: #ff404c;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  color: #ff404c;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 29px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+h2:after {
+  background-color: #ff404c;
+  width: 30px;
+  height: 2px;
+  content: '';
+  display: block;
+  margin-top: 15px;
+}
+
+h3 {
+  color: #8A9097;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 17px;
+  margin: 7px 0 65px 60px;
+}
+
+h5 {
+    color: #414A52;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  padding: 15px 5%;
+
+}
+
 .clear-fix {
   overflow: auto;
-}
-
-#projects, #skills-graph {
-  background-color: #ede7ee;
-}
-
-#workExperience a {
-  font-size: 20px;
-}
-
-#topContacts li a {
-  margin-top: 0;
-  text-decoration: none;
-}
-
-#modal-otherkill {
-  display: none;
-}
-
-#modal-otherkill img {
-  width: 140px;
-  height: 140px;
 }
 
 /*navBar*/
@@ -70,7 +138,7 @@ body {
     position: relative;
     padding-bottom: 10px;
     text-decoration: none;
-    color: #414A52
+    color: #012c40;
 }
 .header-nav-wrapper nav ul li a:hover {
     color: #4281A4;
@@ -96,6 +164,48 @@ body {
     transform: scaleX(1);
 }
 
+.secondary-nav-wrapper {
+    display: inline-block;
+    padding: 35px 30px;
+    background: #16222A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*header*/
+#header {
+  background: #16222A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  clear: right;
+  width: 96%;
+  margin: auto;
+}
+
+/*Work experience*/
+#workExperience a {
+  font-size: 20px;
+}
+
+/*Contacts*/
+#topContacts li a {
+  margin-top: 0;
+  text-decoration: none;
+}
+
+/*Skills*/
+#modal-otherkill {
+  display: none;
+}
+
+#lets-connect {
+  text-align: center;
+}
+
+#modal-otherkill img {
+  width: 140px;
+  height: 140px;
+}
 
 /*entries*/
 
@@ -106,136 +216,29 @@ body {
   padding: 0 5%;
 }
 
-/*headers*/
-
-h1 {
-  font-size: 40px;
-  color: #FF7700;
-  line-height: 48px;
-  display: inline;
-  font-weight: 300;
-}
-
-h2 {
-  font-weight: 300;
-  font-size: 36px;
-  color: #FF7700;
-  line-height: 29px;
-  padding: 10px;
-  margin-top: 30px;
-}
-
-h2:after {
-  display: block;
-  width: 30px;
-  height: 2px;
-  margin-top: 15px;
-  content: '';
-  background-color: #003F91;
-}
-
-
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #8A9097;
-  line-height: 32px;
-  margin-bottom: 20px;
-}
-
-h4 {
-  font-weight: 600;
-  font-size: 15px;
-  color: #4a4a4a;
-  line-height: 17px;
-  margin: 7px 0 65px 60px;
-  text-transform: uppercase
-}
-
-h4:after {
-  display: block;
-  width: 30px;
-  height: 2px;
-  margin-top: 15px;
-  content: '';
-  background-color: #7AE2DE
-}
-
-h5 {
-    font-size: 13px;
-    font-weight: 600;
-    display: inline-block;
-    text-transform: uppercase;
-    color: #414A52;
-}
-
-h2,
-h3,
-h4,
-h5 {
-  padding: 15px 5%;
-
-}
-
+/*span values*/
 
 .date-text {
+  color: #1ca5b8;
   font-style: italic;
   font-size: 14px;
-  color: #999;
   line-height: 16px;
   float: left;
 }
 
 .location-text {
+  color: #1ca5b8;
   font-style: italic;
   font-size: 14px;
-  color: #999;
   line-height: 16px;
   float: right;
 
 }
 
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
 
-a {
-  color: #5DA9E9;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
-header a {
-  color: #FFE74C;
-  
-}
-
-header span {
-  color: #fff;
-}
-
-
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-#skills-h3 {
-  color: #FFE74C;
-  display: none;
-}
-
-.orange {
-  background-color: #FF7700;
-}
-
-.orange-text {
-  color: #FF7700;
+/*Color text*/
+.text-color-primary {
+  color: #ff404c;
 }
 
 .white-text {
@@ -244,28 +247,21 @@ header span {
   vertical-align: super;
 }
 
-.gray {
- 
-  padding-bottom: 10px;
-  clear: both;
+.welcome-message {
+  color: #fff;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 28px;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+#skills-h3 {
+  color: #ff404c;
+  display: none;
 }
 
-#header {
-  background: #16222A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-  background-size: cover;*/
-  clear: right;
-  width: 96%;
-  margin: auto;
-}
-
+/*Layout Flex Box Structure*/
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -286,9 +282,8 @@ background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, F
   padding: 2.5% 5%;
 }
 
-ul {
-  list-style-type: none;
-}
+
+/*Profile Pic*/
 
 .biopic {
   float: left;
@@ -297,17 +292,6 @@ ul {
   display: none;
 }
 
-img {
-  padding: 10px;
-}
-
-span {
-  padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-}
 
 /*footer*/
 .has-padding {
@@ -316,6 +300,10 @@ span {
 
 .footer-bg {
     background-color: #414A52
+}
+
+.footer-title {
+  background-color: #ff404c;
 }
 
 

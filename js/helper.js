@@ -1,13 +1,13 @@
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderRole = '<span class="white-text">%data%</span><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><a href="#" target="_blank"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li></a>';
-var HTMLmobile = '<li class="flex-item"><a href="%urlValue%"><span class="orange-text"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
-var HTMLemail = '<li class="flex-item"><a href="%urlValue%"><span class="orange-text"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
-var HTMLtwitter = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
-var HTMLgithub = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
-var HTMLblog = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text">blog</span><span class="white-text">%data%</span></li><a>';
-var HTMLlocation = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLcontactGeneric = '<li class="flex-item"><a href="#" target="_blank"><span class="text-color-primary">%contact%</span><span class="white-text">%data%</span></li></a>';
+var HTMLmobile = '<li class="flex-item"><a href="%urlValue%"><span class="text-color-primary"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLemail = '<li class="flex-item"><a href="%urlValue%"><span class="text-color-primary"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLtwitter = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="text-color-primary"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLgithub = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="text-color-primary"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLblog = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="text-color-primary">blog</span><span class="white-text">%data%</span></li><a>';
+var HTMLlocation = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="text-color-primary"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
