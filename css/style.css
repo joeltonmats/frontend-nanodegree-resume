@@ -1,22 +1,88 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+  background-color: #E4DFDA;
+  box-sizing: border-box;
+  font-family: Raleway, Verdana, Arial, sans-serif;
 }
 
 .clear-fix {
   overflow: auto;
 }
+
+#projects {
+  background-color: #ede7ee;
+}
+
+#workExperience a {
+  font-size: 20px;
+}
+
+/*navBar*/
+.header-nav-wrapper {
+    position: relative;
+    background-color: #E4DFDA;
+}
+
+.header-nav-wrapper .primary-nav-wrapper {
+    float: right;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.header-nav-wrapper nav {
+    display: inline-block;
+    margin-right: 60px;
+    padding: 34px 0 33px
+}
+.header-nav-wrapper nav ul {
+    display: inline-block;
+}
+.header-nav-wrapper nav ul li {
+    font-size: 13px;
+    display: inline-block;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-right: solid 1px #FFFFFF;
+}
+.header-nav-wrapper nav ul li:last-child {
+    border-right: none;
+}
+.header-nav-wrapper nav ul li a {
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: #414A52
+}
+.header-nav-wrapper nav ul li a:hover {
+    color: #4281A4;
+}
+.header-nav-wrapper nav ul li a:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 2px;
+    content: '';
+    -webkit-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    background-color: #4281A4;
+}
+
+.header-nav-wrapper nav ul li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+/*entries*/
 
 .education-entry,
 .work-entry,
@@ -25,40 +91,74 @@ h6 {
   padding: 0 5%;
 }
 
+/*headers*/
+
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #FF7700;
   line-height: 48px;
   display: inline;
+  font-weight: 300;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
+  font-weight: 300;
+  font-size: 36px;
+  color: #FF7700;
   line-height: 29px;
   padding: 10px;
+  margin-top: 30px;
 }
+
+h2:after {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-top: 15px;
+  content: '';
+  background-color: #003F91;
+}
+
 
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
-  line-height: 22px;
+  color: #8A9097;
+  line-height: 32px;
+  margin-bottom: 20px;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 15px;
   color: #4a4a4a;
   line-height: 17px;
+  margin: 7px 0 65px 60px;
+  text-transform: uppercase
+}
+
+h4:after {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-top: 15px;
+  content: '';
+  background-color: #7AE2DE
+}
+
+h5 {
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #414A52;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  padding: 10px 5%;
+  padding: 15px 5%;
 
 }
 
@@ -87,11 +187,21 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #5DA9E9;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
+
+header a {
+  color: #FFE74C;
+  
+}
+
+header span {
+  color: #fff;
+}
+
 
 .welcome-message {
   font-style: italic;
@@ -101,7 +211,7 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #FFE74C;
   display: none;
 }
 
@@ -119,7 +229,7 @@ a {
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color: #E4DFDA;
   padding-bottom: 10px;
   clear: both;
 }
@@ -128,9 +238,12 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background: url('../images/background.jpeg');
+  background-size: cover;
+  clear: right;
+  width: 96%;
+  margin: auto;
 }
 
 .flex-box {

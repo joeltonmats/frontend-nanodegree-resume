@@ -9,6 +9,8 @@
   <title>Currículo Joelton Matos</title>
 
   <!-- Load the page styles. -->
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
 
@@ -20,30 +22,52 @@
 
 </head>
 
-<body>
-  <div id="main">
-    TO-DO personalizar with D3 to skills enherince the css add the goolge map locations where I Worked obs: aula 10: personnal
-    portfolio
-    <!-- You'll be deleting this line in the course -->
+<body class="container-fluid">
 
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+  <div class="row">
+    <div class="header-nav-wrapper">
+      <div class="primary-nav-wrapper">
+        <nav>
+          <ul class="primary-nav">
+            <li><a href="#workExperience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#mapDiv">Locations</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
+  </div>
+
+  <div id="main" class="row">
+    <!--TO-DO personalizar with D3 to skills enherince the css add the goolge map locations where I Worked obs: aula 10: personnal
+    portfolio-->
+    <!-- You'll be deleting this line in the course -->
+    <header id="header" class="center-content clear-fix">
+      <div class="row">
+        <ul id="topContacts" class="flex-box"></ul>
+      </div>
+    </header>
+
     <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
+
+    <div class="row">
+      <div id="workExperience" class="gray">
+        <h2>Work Experience</h2>
+      </div>
+      <div id="projects" class="col-md-12">
+        <h2>Projects</h2>
+      </div>
+      <div id="education" class="gray">
+        <h2>Education</h2>
+      </div>
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
+
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+      <h3 class="orange center-text">Let's Connect</h3>
       <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
@@ -68,26 +92,25 @@
   -->
 
   <script>
-   
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    if (document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
-    if(document.getElementsByTagName('h1').length === 0) {
+    if (document.getElementsByTagName('h1').length === 0) {
       document.getElementById('header').style.display = 'none';
     }
-    if(document.getElementsByClassName('work-entry').length === 0) {
+    if (document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
     }
-    if(document.getElementsByClassName('project-entry').length === 0) {
+    if (document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
     }
-    if(document.getElementsByClassName('education-entry').length === 0) {
+    if (document.getElementsByClassName('education-entry').length === 0) {
       document.getElementById('education').style.display = 'none';
     }
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    if (document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.display = 'none';
     }
-    if(document.getElementById('map') === null) {
+    if (document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>

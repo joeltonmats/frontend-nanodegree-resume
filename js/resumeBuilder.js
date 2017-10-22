@@ -13,14 +13,9 @@ var bio = {
     biopic: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/000/1fc/211/06189d5.jpg',
     display: function () {
 
-        //basic information
-        $('#header').append(
+        $('#header').prepend(
             HTMLheaderName.replace('%data%', bio.name),
             HTMLheaderRole.replace('%data%', bio.role),
-            HTMLbioPic.replace('%data%', bio.biopic),
-            HTMLworkTitle.replace('%data%', bio.role),
-            HTMLschoolName.replace('%data%', bio.name),
-            HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage),
         );
 
         //contacts
@@ -30,6 +25,11 @@ var bio = {
             HTMLgithub.replace('%data%', bio.contacts.github),
             HTMLtwitter.replace('%data%', bio.contacts.twitter),
             HTMLlocation.replace('%data%', bio.contacts.location)
+        );
+
+        $('#header').append(
+            HTMLbioPic.replace('%data%', bio.biopic),
+            HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage)
         );
 
         //skills
@@ -171,6 +171,7 @@ var projects = {
                     project.images.forEach(function (img) {
                         HTMLprojectImageArray.push(HTMLprojectImage.replace('%data%', img));
                     })
+
 
                     $('.project-entry:last').append(
                         HTMLworkTitle.replace('%data%', project.title),
