@@ -1,39 +1,69 @@
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+/* BANNER */
+var HTMLheaderName = '<h1 class="responsive-headline">I\'m %data%.</h1>';
+var HTMLheaderRole = '<h3>I\'m a <span>%dataRole%</span> %dataWelcome%</h3>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><a href="#" target="_blank"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li></a>';
-var HTMLmobile = '<li class="flex-item"><a href="%urlValue%"><span class="orange-text"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
-var HTMLemail = '<li class="flex-item"><a href="%urlValue%"><span class="orange-text"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
-var HTMLtwitter = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
-var HTMLgithub = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
-var HTMLblog = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text">blog</span><span class="white-text">%data%</span></li><a>';
-var HTMLlocation = '<li class="flex-item"><a href="%urlValue%" target="_blank"><span class="orange-text"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></span><span class="white-text">%data%</span></li></a>';
+var HTMLFacebook = '<li><a href="%urlValue%"><i class="fa fa-facebook"></i></a></li>';
+var HTMLTwitter = '<li><a href="%urlValue%"><i class="fa fa-twitter"></i></a></li>';
+var HTMLGooglePlus = '<li><a href="%urlValue%"><i class="fa fa-google-plus"></i></a></li>';
+var HTMLLinkedin = '<li><a href="%urlValue%"><i class="fa fa-linkedin"></i></a></li>';
+var HTMLInstagram = '<li><a href="%urlValue%"><i class="fa fa-instagram"></i></a></li>';
+var HTMLSkype = '<li><a href="%urlValue%"><i class="fa fa-skype"></i></a></li>';
+var HTMLgithub = '<li><a href="%urlValue%"><i class="fa fa-github"></i></a></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+/* ABOUT */
+
+var HTMLbioPic = '<img src="%data%" class="profile-pic" alt="profile picture">';
+var HTMLaboutMsg = '<p>%data%</span>';
+var HTMLAddress = '<p class="address"><span>%dataName%</span><br><span>%dataDistrict%<br>%dataCity%</span><br><span>%dataPhoneNumber%</span><br><span>%dataEmail%</span></p>';
+
+/* Resume */
+
+//Education
+var HTMLschoolStart = '<div class="row item education-entry"><div class="twelve columns"></div></div>';
+var HTMLschoolName = ' <h3>%data%</h3>';
+var HTMLschoolDegree = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
+//var HTMLschoolDates = '<div class="date-text">%data%</div>';
+//var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+//var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolDetails = '<p>%data%</p>'
+
+//Work
+var HTMLworkStart = '<div class="row item work-entry"><div class="twelve columns"></div></div>';
+var HTMLworkEmployer = '<h3>%data%</h3>';
+var HTMLworkTitle = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
+//var HTMLworkDates = '<div class="date-text">%data%</div>';
+//var HTMLworkLocation = '<div class="location-text">%data%</div>';
+var HTMLworkDescription = '<p>%data%</p>';
+
+//Project
+var HTMLprojectStart = '<div class="columns portfolio-item"><div class="item-wrap" ><a href="#%dataId%" title="" id="%dataIdKey%"><img alt="" src="images/portfolio/coffee.jpg"></a></div></div>';
+var HTMLprojectContent = '<div class="overlay"><div class="portfolio-item-meta"><h5>%dataTitle%</h5><p>%dataDescription%</p></div></div><div class="link-icon"><i class="icon-plus"></i></div>';
+var HTMLprojectModalStart = '<div id="%dataId%" class="popup-modal mfp-hide"><img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt=""/></div>'
+var HTMLprojectModalDescriptionBox = '<div class="description-box"><h4>Coffee Cup</h4><p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequatipsum, nec sagittis sem nibh id elit.</p><span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span></div>';
+var HTMLprojectModalLinkBox = '<div class="link-box"><a href="http://www.behance.net" target="_blank">Details</a><a class="popup-modal-dismiss">Close</a></div>';
+
+
+
+
+//var HTMLprojectTitle = '<a href="#">%data%</a>';
+//var HTMLprojectDates = '<div class="date-text">%data%</div>';
+//var HTMLprojectDescription = '<p><br>%data%</p>';
+//var HTMLprojectImage = '<img src="%data%" class="col-md-3 projectpic">';
+
+
+
+
+
+
+
+
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry col-md-12"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%" class="col-md-3 projectpic">';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+
 
 var HTMLonlineClassesStart = '<div class="online-education-entry"></div>';
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
