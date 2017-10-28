@@ -376,67 +376,40 @@ ul#nav li.current a {
     border-radius: 3px 0 0 3px;
 }
 
-.photoshop {
-    width: 60%;
-    -moz-animation: photoshop 2s ease;
-    -webkit-animation: photoshop 2s ease;
-}
-
-.illustrator {
-    width: 55%;
-    -moz-animation: illustrator 2s ease;
-    -webkit-animation: illustrator 2s ease;
-}
-
-.wordpress {
-    width: 50%;
-    -moz-animation: wordpress 2s ease;
-    -webkit-animation: wordpress 2s ease;
-}
-
 .css {
-    width: 90%;
+    width: 70%;
     -moz-animation: css 2s ease;
     -webkit-animation: css 2s ease;
 }
 
 .html5 {
-    width: 80%;
+    width: 70%;
     -moz-animation: html5 2s ease;
     -webkit-animation: html5 2s ease;
 }
 
+.javascript {
+    width: 90%;
+    -moz-animation: javascript 2s ease;
+    -webkit-animation: javascript 2s ease;
+}
+
 .jquery {
-    width: 50%;
+    width: 80%;
     -moz-animation: jquery 2s ease;
     -webkit-animation: jquery 2s ease;
 }
 
-@-moz-keyframes photoshop {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 60%;
-    }
+.bootstrap {
+    width: 70%;
+    -moz-animation: bootstrap 2s ease;
+    -webkit-animation: bootstrap 2s ease;
 }
 
-@-moz-keyframes illustrator {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 55%;
-    }
-}
-
-@-moz-keyframes wordpress {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 50%;
-    }
+.java {
+    width: 90%;
+    -moz-animation: java 2s ease;
+    -webkit-animation: java 2s ease;
 }
 
 @-moz-keyframes css {
@@ -444,7 +417,7 @@ ul#nav li.current a {
         width: 0px;
     }
     100% {
-        width: 90%;
+        width: 70%;
     }
 }
 
@@ -453,7 +426,7 @@ ul#nav li.current a {
         width: 0px;
     }
     100% {
-        width: 80%;
+        width: 70%;
     }
 }
 
@@ -462,38 +435,11 @@ ul#nav li.current a {
         width: 0px;
     }
     100% {
-        width: 50%;
+        width: 80%;
     }
 }
 
-@-webkit-keyframes photoshop {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 60%;
-    }
-}
-
-@-webkit-keyframes illustrator {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 55%;
-    }
-}
-
-@-webkit-keyframes wordpress {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 50%;
-    }
-}
-
-@-webkit-keyframes css {
+@-moz-keyframes javascript {
     0% {
         width: 0px;
     }
@@ -502,12 +448,39 @@ ul#nav li.current a {
     }
 }
 
+@-moz-keyframes bootstrap {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@-moz-keyframes java {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@-webkit-keyframes css {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
 @-webkit-keyframes html5 {
     0% {
         width: 0px;
     }
     100% {
-        width: 80%;
+        width: 70%;
     }
 }
 
@@ -516,7 +489,34 @@ ul#nav li.current a {
         width: 0px;
     }
     100% {
-        width: 50%;
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes javascript {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@-webkit-keyframes bootstrap {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@-webkit-keyframes java {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 90%;
     }
 }
 
@@ -730,7 +730,7 @@ ul#nav li.current a {
 /* ------------------------------ Testimonials ------------------------------------ */
 
 #testimonials {
-    background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+    background: #1F1F1F url(../images/testimonials-bg.jpeg) no-repeat center center;
     background-size: cover !important;
     -webkit-background-size: cover !important;
     background-attachment: fixed;

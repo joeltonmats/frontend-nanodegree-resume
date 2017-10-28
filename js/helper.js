@@ -27,22 +27,21 @@ var HTMLschoolDetails = '<p>%data%</p>'
 var HTMLworkStart = '<div class="row item work-entry"><div class="twelve columns"></div></div>';
 var HTMLworkEmployer = '<h3>%data%</h3>';
 var HTMLworkTitle = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
-//var HTMLworkDates = '<div class="date-text">%data%</div>';
-//var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p>%data%</p>';
 
 //Skills
 var HTMLskillsStart = '<p>%data%</p>';
 var HTMLskills = ' <li><span class="bar-expand %dataSkillClass%"></span><em>%dataSkill%</em></li>';
 
-
 //Project
-var HTMLprojectStart = '<div class="columns portfolio-item"><div class="item-wrap" ><a href="#%dataLink%" title="" id="%dataLinkId%"><img alt="" src="images/portfolio/coffee.jpg"></a></div></div>';
-var HTMLprojectContent = '<div class="overlay"><div class="portfolio-item-meta"><h5>%dataTitle%</h5><p>%dataDescription%</p></div></div><div class="link-icon"><i class="icon-plus"></i></div>';
-var HTMLprojectModalStart = '<div id="%dataId%" class="popup-modal mfp-hide"><img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt=""/></div>'
-var HTMLprojectModalDescriptionBox = '<div class="description-box"><h4>Coffee Cup</h4><p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequatipsum, nec sagittis sem nibh id elit.</p><span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span></div>';
-var HTMLprojectModalLinkBox = '<div class="link-box"><a href="http://www.behance.net" target="_blank">Details</a><a class="popup-modal-dismiss">Close</a></div>';
+var HTMLprojectStart = '<div class="columns portfolio-item"><div class="item-wrap" ><a href="#%dataModalId%" title="%dataLinkDescription%" id="%dataLinkId%"><img alt="%dataImageDescription%" src="%dataImage%"></a></div></div>';
+var HTMLprojectContent = '<div class="overlay"><div class="portfolio-item-meta"><h5>%dataTitle%</h5><p>%dataDescription%<tiz/p></div></div><div class="link-icon"><i class="icon-plus"></i></div>';
+var HTMLprojectModalStart = '<div id="%dataId%" class="popup-modal mfp-hide"><img class="scale-with-grid" src="%dataImage%" alt=""/></div>'
+var HTMLprojectModalDescriptionBox = '<div class="description-box"><h4>%dataTitle%</h4><p>%dataDescription%</p><span class="categories"><i class="fa fa-tag"></i>Development, Front-end</span></div>';
+var HTMLprojectModalLinkBox = '<div class="link-box"><a href="%dataUrl%" target="_blank">Details</a><a class="popup-modal-dismiss">Close</a></div>';
 
+/* Testimonials */
+var HTMLtestimonials = '<li><blockquote><p>%dataQuote%.</p><cite>%dataAuthor%</cite></blockquote></li>';
 
 
 

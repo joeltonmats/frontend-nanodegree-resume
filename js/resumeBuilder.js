@@ -43,10 +43,10 @@ var bio = {
         'and I love coding.',
         'and I love team work.',
     ],
-    skillsIntroduction: 'At first, I am just a boy just like the life. In my free time I apreciate read books, play games , listening a awesome music, did you say "Welcome to the jungle" ? and of course coding so much as can. In second place, I have to tell you about the place where I was born and I love so much:  Parintins-Am. If you would like to hear about the Amazonas, maybe I can help you. And finaly, I am a web developer who has four years experience. Yes, it is a litlle yet, but you will probably like my work.  I am in love for web development, I like to work with front-end developer using html5,css3, javascrpt and some its frameworks. In the back-end using java and nodejs.',
-    skills: ["HTML5", "CSS3", "Javascript", "Java", "Bootstrap"],
+    skillsIntroduction: 'I like to work as front-end developer using html5, css3, javascrpt and some its frameworks. In the back-end using java and nodejs.',
+    skills: ["HTML5", "CSS", "Javascript", "jQuery", "Bootstrap", "Java"],
     biopic: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/000/1fc/211/06189d5.jpg',
-    aboutMe: 'At first, I am just a boy that like the life. In my free time I apreciate read books, play games , listening a awesome music, did you say "Welcome to the jungle" ? and of course coding so much as can. In second place, I have to tell you about the place where I was born and I love so much:  Parintins-Am. If you would like to hear about the Amazonas, maybe I can help you. And finaly, I am a web developer who has four years experience. Yes, it is a litlle yet, but you will probably like my work.  I am in love for web development, I like to work with front-end developer using html5,css3, javascrpt and some its frameworks. In the back-end using java and nodejs.',
+    aboutMe: 'At first, I am just a boy that like the life. In my free time I apreciate read books, play games , listening a awesome music, did you say "Welcome to the jungle" ? and of course coding so much as can. In second place, I have to tell you about the place where I was born and I love so much:  Parintins-Am. If you would like to hear about the Amazonas, maybe I can help you. And finaly, I am a web developer who has four years experience. Yes, it is a litlle yet, but you will probably like my work.  I am in love with web development.',
     address: {
         city: 'Campinas',
         state: 'SP',
@@ -190,81 +190,127 @@ var work = {
         },
     ],
     display: function () {
-
-        //jobs
-        if (work.jobs.length > 0) {
-            for (var key in work.jobs) {
-                if (work.jobs.hasOwnProperty(key)) {
-                    var job = work.jobs[key];
-                    $('#work-entries').append(HTMLworkStart);
-                    $('.work-entry .twelve:last').append(
-                        HTMLworkEmployer.replace('%data%', job.employer),
-                        HTMLworkTitle.replace('%data%', job.title).replace('%dataDate%', job.date),
-                        HTMLworkDescription.replace('%data%', job.description)
-                    );
-                }
-            }
-        }
-
+        work.jobs.forEach(function (job) {
+            $('#work-entries').append(HTMLworkStart);
+            $('.work-entry .twelve:last').append(
+                HTMLworkEmployer.replace('%data%', job.employer),
+                HTMLworkTitle.replace('%data%', job.title).replace('%dataDate%', job.date),
+                HTMLworkDescription.replace('%data%', job.description)
+            );
+        });
     }
-
 };
 
 var projects = {
     'projects': [
         {
             'id': 1,
+            'title': 'Best Bite',
+            'date': "Jan 2017",
+            'description': 'Overview Best Bite',
+            'images': ['images/portfolio/bestbite.jpg', 'images/portfolio/modals/bestbite.jpg'],
+            'link': 'https://thimbleprojects.org/joeltonmatos/331395/'
+        },
+        {
+            'id': 2,
+            'title': 'Bass',
+            'date': "Jan 2017",
+            'description': 'Overview Bass',
+            'images': ['images/portfolio/bass.jpg', 'images/portfolio/modals/bass.jpg'],
+            'link': 'https://thimbleprojects.org/joeltonmatos/331387/'
+        },
+        {
+            'id': 3,
+            'title': 'Schedule',
+            'date': "Jan 2017",
+            'description': 'Overview Schedule',
+            'images': ['images/portfolio/schedule.jpg', 'images/portfolio/modals/schedule.jpg'],
+            'link': 'https://thimbleprojects.org/joeltonmatos/331383/'
+        },
+        {
+            'id': 4,
+            'title': 'Adoptly',
+            'date': "Jan 2017",
+            'description': 'Overview Best Bite',
+            'images': ['images/portfolio/adoptly.jpg', 'images/portfolio/modals/adoptly.jpg'],
+            'link': 'https://thimbleprojects.org/joeltonmatos/331330/'
+        },
+        {
+            'id': 5,
             'title': 'New Saude System',
             'date': "Jan 2016" + "-" + "Jun 2016",
             'description': 'New Version of Saude System Web',
             'images': ['https://www.advsol.com/ASI/images/NewSite/Devices/three_device_image.png',
                 'https://thenextweb.com/wp-content/blogs.dir/1/files/2013/09/customers.png'
             ],
+            'link': 'https://thimbleprojects.org/joeltonmatos/331395/'
         },
         {
-            'id': 2,
+            'id': 6,
             'title': 'New Odonto System',
             'date': "Oct 2016" + "-" + "Jan 2017",
             'description': 'New Version of Odonto System Web',
             'images': ['https://www.webtrade.ie/_fileupload/Image/1_cms-image.png', 'http://s2.dmcdn.net/GIyzb/1280x720-S0R.jpg'],
+            'link': 'https://thimbleprojects.org/joeltonmatos/331395/'
         },
 
     ],
     display: function () {
 
-        // projetcs
-        if (projects.projects.length > 0) {
-            for (var key in projects.projects) {
-                if (projects.projects.hasOwnProperty(key)) {
-                    var project = projects.projects[key];
-                    var callModalId = 'call-' + modalId;
-                    var modalId = 'modal-' + (project.id + 8);
+        projects.projects.forEach(function (project) {
+            var callModalId = 'call-' + project.id + 8;
+            var modalId = 'modal-' + (project.id + 8);
 
-                    // build thumbnail
-                    $('#portfolio-wrapper').append(HTMLprojectStart.replace('%dataLink%', modalId).replace('%dataLinkId%', callModalId));
+            // build overview projects
+            $('#portfolio-wrapper').append(
+                HTMLprojectStart
+                    .replace('%dataModalId%', modalId)
+                    .replace('%dataLinkDescription%', project.description)
+                    .replace('%dataLinkId%', callModalId)
+                    .replace('%dataImageDescription%', project.description)
+                    .replace('%dataImage%', project.images[0])
+            );
 
-                    $('#' + callModalId).append(HTMLprojectContent.replace('%dataTitle%', project.title).replace('%dataDescription%', project.description));
-
-                    // build modals in background
-                    $('#portfolio > .row').append(
-                        HTMLprojectModalStart.replace('%dataId%', modalId)
-                    );
-
-                    $('#' + modalId).append(
-                        HTMLprojectModalDescriptionBox,
-                        HTMLprojectModalLinkBox
-                    );
-                }
-            }
-        }
+            $('#' + callModalId).append(
+                HTMLprojectContent
+                    .replace('%dataTitle%', project.title)
+                    .replace('%dataDescription%', project.description)
+            );
 
 
 
+            // build modals in background
+            $('#portfolio > .row').append(
+                HTMLprojectModalStart
+                    .replace('%dataId%', modalId)
+                    .replace('%dataImage%', project.images[1])
+            );
 
-
+            $('#' + modalId).append(
+                HTMLprojectModalDescriptionBox.replace('%dataTitle%', project.title).replace('%dataDescription%', project.description),
+                HTMLprojectModalLinkBox.replace('%dataUrl%', project.link)
+            );
+        });
     }
-
 };
+
+var myTestimonials = {
+    testimonials: [
+        { quote: 'Strive not to be a success, but rather to be of value.', author: 'Albert Einstein' },
+        { quote: 'We become what we think about.', author: 'Earl Nightingale' },
+        { quote: 'The two most important days in your life are the day you are born and the day you find out why.', author: 'Mark Twain' },
+    ],
+    display: function () {
+        myTestimonials.testimonials.forEach(function (testimonial) {
+            $('.slides').append(
+                HTMLtestimonials
+                    .replace('%dataQuote%', testimonial.quote)
+                    .replace('%dataAuthor%', testimonial.author)
+            );
+        });
+    }
+}
+
 
 function inName(name) {
     var newName;
@@ -280,13 +326,11 @@ function inName(name) {
 }
 
 function begin() {
-    //to-do: remove line below
-    //$("#main").append(bio.name, internationalizeButton);
-
     bio.display();
     education.display();
     work.display();
     projects.display();
+    myTestimonials.display();
     /*
     getModalOthersSkills(); */
 }
