@@ -1,30 +1,26 @@
 /* BANNER */
-var HTMLheaderName = '<h1 class="responsive-headline">I\'m %data%.</h1>';
-var HTMLheaderRole = '<h3>I\'m a <span>%dataRole%</span> %dataWelcome%</h3>';
+var HTMLheaderName = '<h1 class="responsive-headline">Hey, I\'m %data%.</h1>';
+var HTMLheaderRole = '<h3>I\'m a <span>%dataRole%</span> <span id="welcome-message">%dataWelcome%</span></h3>';
 
-var HTMLFacebook = '<li><a href="%urlValue%"><i class="fa fa-facebook"></i></a></li>';
-var HTMLTwitter = '<li><a href="%urlValue%"><i class="fa fa-twitter"></i></a></li>';
-var HTMLGooglePlus = '<li><a href="%urlValue%"><i class="fa fa-google-plus"></i></a></li>';
-var HTMLLinkedin = '<li><a href="%urlValue%"><i class="fa fa-linkedin"></i></a></li>';
-var HTMLInstagram = '<li><a href="%urlValue%"><i class="fa fa-instagram"></i></a></li>';
-var HTMLSkype = '<li><a href="%urlValue%"><i class="fa fa-skype"></i></a></li>';
-var HTMLgithub = '<li><a href="%urlValue%"><i class="fa fa-github"></i></a></li>';
+var HTMLFacebook = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-facebook"></i></a></li>';
+var HTMLTwitter = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-twitter"></i></a></li>';
+var HTMLGooglePlus = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-google-plus"></i></a></li>';
+var HTMLLinkedin = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-linkedin"></i></a></li>';
+var HTMLInstagram = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-instagram"></i></a></li>';
+var HTMLSkype = '<li><a href="#" title="%urlValue%"><i class="fa fa-skype"></i></a></li>';
+var HTMLgithub = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-github"></i></a></li>';
 
 /* ABOUT */
-
 var HTMLbioPic = '<img src="%data%" class="profile-pic" alt="profile picture">';
 var HTMLaboutMsg = '<p>%data%</span>';
 var HTMLAddress = '<p class="address"><span>%dataName%</span><br><span>%dataDistrict%<br>%dataCity%</span><br><span>%dataPhoneNumber%</span><br><span>%dataEmail%</span></p>';
 
-/* Resume */
+/* RESUME */
 
 //Education
 var HTMLschoolStart = '<div class="row item education-entry"><div class="twelve columns"></div></div>';
-var HTMLschoolName = ' <h3>%data%</h3>';
+var HTMLschoolName = ' <h3><a href="%dataUrl%" target="_blank">%data%</a></h3>';
 var HTMLschoolDegree = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
-//var HTMLschoolDates = '<div class="date-text">%data%</div>';
-//var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-//var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 var HTMLschoolDetails = '<p>%data%</p>'
 
 //Work
@@ -35,8 +31,13 @@ var HTMLworkTitle = '<p class="info">%data% <span>&bull;</span> <em class="date"
 //var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p>%data%</p>';
 
+//Skills
+var HTMLskillsStart = '<p>%data%</p>';
+var HTMLskills = ' <li><span class="bar-expand %dataSkillClass%"></span><em>%dataSkill%</em></li>';
+
+
 //Project
-var HTMLprojectStart = '<div class="columns portfolio-item"><div class="item-wrap" ><a href="#%dataId%" title="" id="%dataIdKey%"><img alt="" src="images/portfolio/coffee.jpg"></a></div></div>';
+var HTMLprojectStart = '<div class="columns portfolio-item"><div class="item-wrap" ><a href="#%dataLink%" title="" id="%dataLinkId%"><img alt="" src="images/portfolio/coffee.jpg"></a></div></div>';
 var HTMLprojectContent = '<div class="overlay"><div class="portfolio-item-meta"><h5>%dataTitle%</h5><p>%dataDescription%</p></div></div><div class="link-icon"><i class="icon-plus"></i></div>';
 var HTMLprojectModalStart = '<div id="%dataId%" class="popup-modal mfp-hide"><img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt=""/></div>'
 var HTMLprojectModalDescriptionBox = '<div class="description-box"><h4>Coffee Cup</h4><p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequatipsum, nec sagittis sem nibh id elit.</p><span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span></div>';
@@ -57,9 +58,6 @@ var HTMLprojectModalLinkBox = '<div class="link-box"><a href="http://www.behance
 
 
 
-
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 
 

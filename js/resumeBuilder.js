@@ -1,31 +1,13 @@
-function loadSkillGraph() {
-
-    $('#skills-graph').append(HTMLGraphSkills, HTMLButtonOthersSkills);
-
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'horizontalBar',
-        data: {
-            labels: ["HTML5", "CSS3", "Javascript", "Bootstrap", "Java Web"],
-            datasets: [{
-                label: 'Nível de Habilidade',
-                data: [9, 9, 9, 8, 8, 0, 10],
-                backgroundColor: [
-                    '#FF6500',
-                    '#3F88C5',
-                    '#003F91',
-                    '#772D8B',
-                    "#4357AD",
-                    '#FF82A9',
-                    '#ED254E',
-                ],
-            }]
-        },
-        options: {
-            barPercentage: 0.1,
-        }
+function typedBanner(welcomeMessageArray) {
+    var typed = new Typed("#welcome-message", {
+        strings: welcomeMessageArray,
+        typeSpeed: 50,
+        startDelay: 200,
+        backSpeed: 30,
+        loop: true,
+        backDelay: 700,
     });
-};
+}
 
 function getModalOthersSkills() {
     $('#btnOtherSkill').click(function (event) {
@@ -40,24 +22,31 @@ function getModalOthersSkills() {
 };
 
 var bio = {
-    name: 'Teste',
+    name: 'Joelton Matos',
     role: 'Web Developer',
     contacts: {
-        facebook: 'https://github.com/joeltonmats',
+        facebook: 'https://www.facebook.com/joelton.matos',
         twitter: 'https://twitter.com/joeltonmatos',
-        google: 'https://twitter.com/joeltonmatos',
-        linkedin: 'https://twitter.com/joeltonmatos',
-        instagram: 'https://twitter.com/joeltonmatos',
-        skype: 'https://twitter.com/joeltonmatos',
+        google: 'https://plus.google.com/+joeltonmatos',
+        linkedin: 'https://www.linkedin.com/in/joelton-matos-0b56884b/',
+        instagram: 'https://www.instagram.com/joeltonmatos',
+        skype: 'joeltonmatos',
         mobile: '+55 92 91358952',
         email: 'joeltonmatos@gmail.com',
         github: 'https://github.com/joeltonmats',
         location: 'https://goo.gl/5fKeiM'
     },
-    welcomeMessage: 'creating awesome and effective visual identities for companies of all sizes around the globe.',
-    skills: ["HTML5", "CSS3", "Javascript", "Java"],
-    biopic: 'images/profilepic.jpg',
-    aboutMe: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.',
+    welcomeMessages: [
+        'and I love to build web applications.',
+        'and I love to build landing pages.',
+        'and I love Web development.',
+        'and I love coding.',
+        'and I love team work.',
+    ],
+    skillsIntroduction: 'At first, I am just a boy just like the life. In my free time I apreciate read books, play games , listening a awesome music, did you say "Welcome to the jungle" ? and of course coding so much as can. In second place, I have to tell you about the place where I was born and I love so much:  Parintins-Am. If you would like to hear about the Amazonas, maybe I can help you. And finaly, I am a web developer who has four years experience. Yes, it is a litlle yet, but you will probably like my work.  I am in love for web development, I like to work with front-end developer using html5,css3, javascrpt and some its frameworks. In the back-end using java and nodejs.',
+    skills: ["HTML5", "CSS3", "Javascript", "Java", "Bootstrap"],
+    biopic: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/000/1fc/211/06189d5.jpg',
+    aboutMe: 'At first, I am just a boy that like the life. In my free time I apreciate read books, play games , listening a awesome music, did you say "Welcome to the jungle" ? and of course coding so much as can. In second place, I have to tell you about the place where I was born and I love so much:  Parintins-Am. If you would like to hear about the Amazonas, maybe I can help you. And finaly, I am a web developer who has four years experience. Yes, it is a litlle yet, but you will probably like my work.  I am in love for web development, I like to work with front-end developer using html5,css3, javascrpt and some its frameworks. In the back-end using java and nodejs.',
     address: {
         city: 'Campinas',
         state: 'SP',
@@ -69,15 +58,9 @@ var bio = {
         // Banner
         $('.banner-text').prepend(
             HTMLheaderName.replace('%data%', bio.name),
-            HTMLheaderRole.replace('%dataRole%', bio.role).replace('%dataWelcome%', bio.welcomeMessage));
+            HTMLheaderRole.replace('%dataRole%', bio.role).replace('%dataWelcome%', bio.welcomeMessages[0]));
 
-        var HTMLFacebook = '<li><a href="%urlValue%"><i class="fa fa-facebook"></i></a></li>';
-        var HTMLTwitter = '<li><a href="%urlValue%"><i class="fa fa-twitter"></i></a></li>';
-        var HTMLGooglePlus = '<li><a href="%urlValue%"><i class="fa fa-google-plus"></i></a></li>';
-        var HTMLLinkedin = '<li><a href="%urlValue%"><i class="fa fa-linkedin"></i></a></li>';
-        var HTMLInstagram = '<li><a href="%urlValue%"><i class="fa fa-instagram"></i></a></li>';
-        var HTMLSkype = '<li><a href="%urlValue%"><i class="fa fa-skype"></i></a></li>';
-        var HTMLgithub = '<li><a href="%urlValue%"><i class="fa fa-github"></i></a></li>';
+        typedBanner(bio.welcomeMessages);
 
         //Banner Social
         $('.banner-text .social').append(
@@ -91,66 +74,59 @@ var bio = {
         );
 
         //About
-        $('#profile-pic').append(
-            HTMLbioPic.replace('%data%', bio.biopic)
-        );
-
-        $('#simple-resume > h2').after(
-            HTMLaboutMsg.replace('%data%', bio.aboutMe)
-        );
-
+        $('#profile-pic').append(HTMLbioPic.replace('%data%', bio.biopic));
+        $('#simple-resume > h2').after(HTMLaboutMsg.replace('%data%', bio.aboutMe));
         $('.contact-details > h2').after(
             HTMLAddress
                 .replace('%dataName%', bio.name)
                 .replace('%dataDistrict%', bio.address.district)
-                .replace('%dataCity%', bio.address.city + ',' + bio.address.state + '-' + bio.address.country)
+                .replace('%dataCity%', bio.address.city + ', ' + bio.address.state + ' - ' + bio.address.country)
                 .replace('%dataPhoneNumber%', bio.contacts.mobile)
                 .replace('%dataEmail%', bio.contacts.email)
 
         );
 
-        /*
-               $('#footerContacts').append(
-                   HTMLmobile.replace('%urlValue%', '#').replace('%data%', bio.contacts.mobile),
-                   HTMLemail.replace('%urlValue%', '#').replace('%data%', bio.contacts.email),
-                   HTMLgithub.replace('%urlValue%', bio.contacts.github).replace('%data%', '/joeltonmats'),
-                   HTMLtwitter.replace('%urlValue%', bio.contacts.twitter).replace('%data%', '@joeltonmatos'),
-                   HTMLlocation.replace('%urlValue%', bio.contacts.location).replace('%data%', 'Campinas-SP')
-               );
-       
-              
-       
-               //skills
-               if (bio.skills.length > 0) {
-                   $('#header').append(HTMLskillsStart);
-                   for (var index = 0; index < bio.skills.length; index++) {
-                       var skill = bio.skills[index];
-                       $('#skills').append(HTMLskills.replace('%data%', skill));
-                   }
-               } */
+        //skills
+        if (bio.skills.length > 0) {
+            $('#skill-content').prepend(HTMLskillsStart.replace('%data%', bio.skillsIntroduction));
+            for (var index = 0; index < bio.skills.length; index++) {
+                var skill = bio.skills[index];
+                $('.skills').append(HTMLskills.replace('%dataSkillClass%', skill.toLowerCase()).replace('%dataSkill%', skill.toUpperCase()));
+            }
+        }
 
+        // social footer
+        $('.social-links').append(
+            HTMLFacebook.replace('%urlValue%', bio.contacts.facebook),
+            HTMLTwitter.replace('%urlValue%', bio.contacts.twitter),
+            HTMLGooglePlus.replace('%urlValue%', bio.contacts.google),
+            HTMLLinkedin.replace('%urlValue%', bio.contacts.linkedin),
+            HTMLInstagram.replace('%urlValue%', bio.contacts.instagram),
+            HTMLSkype.replace('%urlValue%', bio.contacts.skype),
+            HTMLgithub.replace('%urlValue%', bio.contacts.github)
+        );
     }
 };
 
 var education = {
     'schools': [
         {
-            'name': 'Universidade do Estado do Amazonas',
+            'name': 'Maurício de Nassau College',
             'location': 'Manaus-AM',
-            'degree': 'Engenharia da Computação',
-            'majors': ['Graduação'],
-            'dates': "Fev 2009" + "-" + "October 2014",
-            'url': '',
-            'details': 'This is a detail brow'
+            'degree': 'Project Management',
+            'majors': ['Graduated Degree'],
+            'dates': "February 2016",
+            'url': 'https://www.posgrado.net.br/',
+            'details': 'A Graduated Degree in Manaus-AM. Occurred for 18 months.'
         },
         {
-            'name': 'Universidade do Estado do Amazonas',
+            'name': 'University of the State of Amazonas',
             'location': 'Manaus-AM',
-            'degree': 'Engenharia da Computação',
-            'majors': ['Graduação'],
-            'dates': "Fev 2009" + "-" + "October 2014",
-            'url': '',
-            'details': 'This is a detail brow'
+            'degree': 'Computer Engineering',
+            'majors': ['Bachelor\'s degree'],
+            'dates': "August 2014",
+            'url': 'http://www3.uea.edu.br/',
+            'details': 'A Bachelor Degree in Manaus-AM. Occurred for 5 years.'
         }
     ],
     'onlineCourses': [
@@ -171,11 +147,8 @@ var education = {
         // school
         educationSchools.forEach(function (school) {
             $('.education-entry .twelve:last').append(
-                HTMLschoolName.replace('%data%', school.name),
+                HTMLschoolName.replace('%data%', school.name).replace('%dataUrl%', school.url),
                 HTMLschoolDegree.replace('%data%', school.degree).replace('%dataDate%', school.dates),
-                /* HTMLschoolDates.replace('%data%', school.dates),
-                HTMLschoolLocation.replace('%data%', school.location),
-                HTMLschoolMajor.replace('%data%', school.majors), */
                 HTMLschoolDetails.replace('%data%', school.details)
             );
         });
@@ -195,26 +168,26 @@ var education = {
 var work = {
     'jobs': [
         {
-            'employer': 'Tribunal de Contas do Estado do Amazonas',
-            'title': 'Estagiario Desenvolvimento Web',
-            'location': 'Manaus-AM',
-            'date': "Mar 2013" + " - " + "Jan 2014",
-            'description': 'Desenvolvimento e manutenção de sistemas web. Utilizava-se linguagem java, bibliotecas jquery, primefaces. Relatórios através de consulta a base de dados por meio de consultas sql.'
+            'employer': 'Venturus',
+            'title': 'Junior Analyst Developer',
+            'location': 'Campinas-SP',
+            'date': "Currently",
+            'description': 'Web development using Java, HTML5, CSS3 and Javascript. Also, simple features using typescript, angualar4 and project inovation set up with Apache Cassandra, Spark Streaming and Java 8.'
         },
         {
-            'employer': 'MedicLab - Centro Medico',
-            'title': 'Desenvolvedor Web',
+            'employer': 'Medic Lab - Medic Center',
+            'title': 'Web Developer',
             'location': 'Manaus-AM',
             'date': "Jan 2014" + " - " + "Jan 2017",
-            'description': 'Desenvolvimento e manutenção de softwares utilizando principalmente linguagem java. Front-end através de frameworks como angularJs e bootstrap.'
+            'description': 'Front-end Development using html5, css3, javacript and frameworks like bootstrap and angularJs. Also, development and maintenance systems using Java Server Faces and hibernate. Creating queries, functions and views in SGBD. Analysis and requirements surveys for new business rules.'
         },
         {
-            'employer': 'Venturus',
-            'title': 'Analista Desenvolvedor JR',
-            'location': 'Campinas-SP',
-            'date': "Atualmente",
-            'description': 'Desenvolvimento e manutencao de softwares utilizando Java'
-        }
+            'employer': 'Court of Accounts of the State of the Amazonas',
+            'title': 'Intern',
+            'location': 'Manaus-AM',
+            'date': "Mar 2013" + " - " + "Jan 2014",
+            'description': 'Software Development with Frameworks Java Server Faces 2, Struts 2 and queries with SGBD PostegreSql.'
+        },
     ],
     display: function () {
 
@@ -264,34 +237,23 @@ var projects = {
             for (var key in projects.projects) {
                 if (projects.projects.hasOwnProperty(key)) {
                     var project = projects.projects[key];
-                    //var HTMLprojectImageArray = [];
+                    var callModalId = 'call-' + modalId;
+                    var modalId = 'modal-' + (project.id + 8);
 
-                    $('#portfolio-wrapper').append(HTMLprojectStart.replace('%dataId%', project.id + 8).replace('%dataIdKey%', project.id + 8));
-                    var id = '#' + (project.id + 8);
-                    $(id).append(HTMLprojectContent.replace('%dataTitle%', project.title).replace('%dataDescription%', project.description));
+                    // build thumbnail
+                    $('#portfolio-wrapper').append(HTMLprojectStart.replace('%dataLink%', modalId).replace('%dataLinkId%', callModalId));
 
+                    $('#' + callModalId).append(HTMLprojectContent.replace('%dataTitle%', project.title).replace('%dataDescription%', project.description));
+
+                    // build modals in background
                     $('#portfolio > .row').append(
-                        HTMLprojectModalStart.replace('%dataId%', (project.id + 8))
+                        HTMLprojectModalStart.replace('%dataId%', modalId)
                     );
 
-                    var modal = '#' + (project.id + 8);
-                    $(modal).append(
+                    $('#' + modalId).append(
                         HTMLprojectModalDescriptionBox,
                         HTMLprojectModalLinkBox
                     );
-
-
-                    /*   project.images.forEach(function (img) {
-                          HTMLprojectImageArray.push(HTMLprojectImage.replace('%data%', img));
-                      }) */
-
-                    /* 
-                                        $('.project-entry:last').append(
-                                            HTMLworkTitle.replace('%data%', project.title),
-                                            HTMLprojectDates.replace('%data%', project.date),
-                                            HTMLprojectDescription.replace('%data%', project.description),
-                                           /*  HTMLprojectImageArray */
-                    //); */
                 }
             }
         }
@@ -326,7 +288,6 @@ function begin() {
     work.display();
     projects.display();
     /*
-    loadSkillGraph();
     getModalOthersSkills(); */
 }
 
