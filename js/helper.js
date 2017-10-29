@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
 
@@ -35,15 +36,126 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
+||||||| parent of adb945d... implemented version 1.0 resume
+/* BANNER */
+var HTMLheaderName = '<h1 class="responsive-headline">Hey, I\'m %data%.</h1>';
+var HTMLheaderRole = '<h3>I\'m a <span>%dataRole%</span> <span id="welcome-message">%dataWelcome%</span></h3>';
+
+var HTMLFacebook = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-facebook"></i></a></li>';
+var HTMLTwitter = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-twitter"></i></a></li>';
+var HTMLGooglePlus = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-google-plus"></i></a></li>';
+var HTMLLinkedin = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-linkedin"></i></a></li>';
+var HTMLInstagram = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-instagram"></i></a></li>';
+var HTMLSkype = '<li><a href="#" title="%urlValue%"><i class="fa fa-skype"></i></a></li>';
+var HTMLgithub = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-github"></i></a></li>';
+
+/* ABOUT */
+var HTMLbioPic = '<img src="%data%" class="profile-pic" alt="profile picture">';
+var HTMLaboutMsg = '<p>%data%</span>';
+var HTMLAddress = '<p class="address"><span>%dataName%</span><br><span>%dataDistrict%<br>%dataCity%</span><br><span>%dataPhoneNumber%</span><br><span>%dataEmail%</span></p>';
+
+/* RESUME */
+
+//Education
+var HTMLschoolStart = '<div class="row item education-entry"><div class="twelve columns"></div></div>';
+var HTMLschoolName = ' <h3><a href="%dataUrl%" target="_blank">%data%</a></h3>';
+var HTMLschoolDegree = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
+var HTMLschoolDetails = '<p>%data%</p>'
+
+//Work
+var HTMLworkStart = '<div class="row item work-entry"><div class="twelve columns"></div></div>';
+var HTMLworkEmployer = '<h3>%data%</h3>';
+var HTMLworkTitle = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
+var HTMLworkDescription = '<p>%data%</p>';
+
+//Skills
+var HTMLskillsStart = '<p>%data%</p>';
+var HTMLskills = ' <li><span class="bar-expand %dataSkillClass%"></span><em>%dataSkill%</em></li>';
+
+//Project
+var HTMLprojectStart = '<div class="columns portfolio-item"><div class="item-wrap" ><a href="#%dataModalId%" title="%dataLinkDescription%" id="%dataLinkId%"><img alt="%dataImageDescription%" src="%dataImage%"></a></div></div>';
+var HTMLprojectContent = '<div class="overlay"><div class="portfolio-item-meta"><h5>%dataTitle%</h5><p>%dataDescription%<tiz/p></div></div><div class="link-icon"><i class="icon-plus"></i></div>';
+var HTMLprojectModalStart = '<div id="%dataId%" class="popup-modal mfp-hide"><img class="scale-with-grid" src="%dataImage%" alt=""/></div>'
+var HTMLprojectModalDescriptionBox = '<div class="description-box"><h4>%dataTitle%</h4><p>%dataDescription%</p><span class="categories"><i class="fa fa-tag"></i>Development, Front-end</span></div>';
+var HTMLprojectModalLinkBox = '<div class="link-box"><a href="%dataUrl%" target="_blank">Details</a><a class="popup-modal-dismiss">Close</a></div>';
+
+/* Testimonials */
+var HTMLtestimonials = '<li><blockquote><p>%dataQuote%.</p><cite>%dataAuthor%</cite></blockquote></li>';
+
+
+
+//var HTMLprojectTitle = '<a href="#">%data%</a>';
+//var HTMLprojectDates = '<div class="date-text">%data%</div>';
+//var HTMLprojectDescription = '<p><br>%data%</p>';
+//var HTMLprojectImage = '<img src="%data%" class="col-md-3 projectpic">';
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+/* BANNER */
+var HTMLheaderName = '<h1 class="responsive-headline">Hey, I\'m %data%.</h1>';
+var HTMLheaderRole = '<h3>I\'m a <span>%dataRole%</span> <span id="welcome-message">%dataWelcome%</span></h3>';
+
+var HTMLFacebook = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-facebook"></i></a></li>';
+var HTMLTwitter = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-twitter"></i></a></li>';
+var HTMLGooglePlus = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-google-plus"></i></a></li>';
+var HTMLLinkedin = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-linkedin"></i></a></li>';
+var HTMLInstagram = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-instagram"></i></a></li>';
+var HTMLSkype = '<li><a href="#" title="%urlValue%"><i class="fa fa-skype"></i></a></li>';
+var HTMLgithub = '<li><a href="%urlValue%" target="_blank"><i class="fa fa-github"></i></a></li>';
+
+/* ABOUT */
+var HTMLbioPic = '<img src="%data%" class="profile-pic" alt="profile picture">';
+var HTMLaboutMsg = '<p>%data%</span>';
+var HTMLAddress = '<p class="address"><span>%dataName%</span><br><span>%dataDistrict%<br>%dataCity%</span><br><span>%dataPhoneNumber%</span><br><span>%dataEmail%</span></p>';
+
+/* RESUME */
+
+//Education
+var HTMLschoolStart = '<div class="row item education-entry"><div class="twelve columns"></div></div>';
+var HTMLschoolName = ' <h3><a href="%dataUrl%" target="_blank">%data%</a></h3>';
+var HTMLschoolDegree = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
+var HTMLschoolDetails = '<p>%data%</p>'
+
+//Work
+var HTMLworkStart = '<div class="row item work-entry"><div class="twelve columns"></div></div>';
+var HTMLworkEmployer = '<h3>%data%</h3>';
+var HTMLworkTitle = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
+var HTMLworkDescription = '<p>%data%</p>';
+
+//Skills
+var HTMLskillsStart = '<p>%data%</p>';
+var HTMLskills = ' <li><span class="bar-expand %dataSkillClass%"></span><em>%dataSkill%</em></li>';
+
+//Project
+var HTMLprojectStart = '<div class="columns portfolio-item"><div class="item-wrap" ><a href="#%dataModalId%" title="%dataLinkDescription%" id="%dataLinkId%"><img alt="%dataImageDescription%" src="%dataImage%"></a></div></div>';
+var HTMLprojectContent = '<div class="overlay"><div class="portfolio-item-meta"><h5>%dataTitle%</h5><p>%dataDescription%<tiz/p></div></div><div class="link-icon"><i class="icon-plus"></i></div>';
+var HTMLprojectModalStart = '<div id="%dataId%" class="popup-modal mfp-hide"><img class="scale-with-grid" src="%dataImage%" alt=""/></div>'
+var HTMLprojectModalDescriptionBox = '<div class="description-box"><h4>%dataTitle%</h4><p>%dataDescription%</p><span class="categories"><i class="fa fa-tag"></i>Development, Front-end</span></div>';
+var HTMLprojectModalLinkBox = '<div class="link-box"><a href="%dataUrl%" target="_blank">Details</a><a class="popup-modal-dismiss">Close</a></div>';
+
+/* Testimonials */
+var HTMLtestimonials = '<li><blockquote><p>%dataQuote%.</p><cite>%dataAuthor%</cite></blockquote></li>';
+
+
+/*Online Courser - Not used yet.*/
+>>>>>>> adb945d... implemented version 1.0 resume
 var HTMLonlineClassesStart = '<div class="online-education-entry"></div>';
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
-
-var HTMLGraphSkills = '<div class="col-md-10"><canvas id="myChart" width="50" height="14"></canvas></div>';
-var HTMLButtonOthersSkills = '<div class="col-md-2"><button class="btn btn-sm btn-primary" id="btnOtherSkill">Outras Habilidades</button></div>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
