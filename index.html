@@ -1,25 +1,31 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
 
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resume Joelton Matos</title>
+  <meta name="description" content="A resume by Joelton Matos">
+  <meta name="author" content="Joelton Matos">
 
-  <!-- Tells the browser what the title of this page should be. -->
-  <title>Joelton Resume</title>
+  <!-- Mobile Specific Metas-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Default CSS style -->
+  <link href="css/default.css" rel="stylesheet">
+
+  <!--Customized CSS Style-->
+  <link href="css/layout.css" rel="stylesheet">
+
+  <!--Media Queries-->
+  <link rel="stylesheet" href="css/media-queries.css">
 
   <!--Magnific Popup Style-->
-  <link rel="stylesheet" href="css/magnific-popup.css">
-
-  <!-- Load the page styles. -->
-  <link href="css/reset.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <link href="js/jquery-modal/jquery.modal.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/maginfic-popup/magnific-popup.css">
 
   <!-- SCRIPT -->
-  <script src="js/modernizr.js"></script>
+  <script src="js/lib/modernizr.js"></script>
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
@@ -29,120 +35,197 @@
 
 </head>
 
-<body class="container-fluid">
+<body>
 
-  <div class="row">
-    <div class="header-nav-wrapper">
-      <div class="primary-nav-wrapper">
-        <nav>
-          <ul class="primary-nav">
-            <li><a href="#workExperience">Work Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#mapDiv">Locations</a></li>
-          </ul>
-        </nav>
+  <!-- ===========Header============= -->
+  <header id="home">
+
+    <!-- #nav-wrap -->
+    <nav id="nav-wrap">
+
+      <!--Menu in mobile devices-->
+      <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+      <!-- #nav -->
+      <ul id="nav" class="nav">
+        <li class="current">
+          <a class="smoothscroll" href="#home">Home</a>
+        </li>
+        <li>
+          <a class="smoothscroll" href="#about">About</a>
+        </li>
+        <li>
+          <a class="smoothscroll" href="#resume">Resume</a>
+        </li>
+        <li>
+          <a class="smoothscroll" href="#portfolio">Works</a>
+        </li>
+        <li>
+          <a class="smoothscroll" href="#testimonials">Inspiration</a>
+        </li>
+      </ul>
+      <!-- end #nav -->
+
+    </nav>
+    <!-- end #nav-wrap -->
+
+    <!-- Banner -->
+    <div class="row banner">
+      <div class="banner-text">
+        <hr />
+        <ul class="social">
+        </ul>
       </div>
     </div>
-  </div>
 
-  <div id="main" class="row">
-    <!--TO-DO personalizar with D3 to skills enherince the css add the goolge map locations where I Worked obs: aula 10: personnal
-    portfolio-->
-    <!-- You'll be deleting this line in the course -->
-    <header id="header" class="center-content clear-fix">
+    <p class="scrolldown">
+      <a class="smoothscroll" href="#about">
+        <i class="icon-down-circle"></i>
+      </a>
+    </p>
+
+  </header>
+
+  <!-- ===========Main Content============= -->
+  <main>
+
+
+    <!-- about section -->
+    <section id="about">
       <div class="row">
-        <ul id="topContacts" class="flex-box"></ul>
-      </div>
-    </header>
+        <div class="three columns" id="profile-pic"></div>
+        <div class="nine columns main-col" id="simple-resume">
+          <h2>About Me</h2>
 
-    <div style="clear: both;"></div>
-
-    <div class="row">
-      <section id="workExperience" class="gray">
-        <h2>Work Experience</h2>
-      </section>
-      <section id="projects" class="col-md-12">
-        <h2>Projects</h2>
-      </section>
-      <section id="education" class="gray">
-        <h2>Education</h2>
-      </section>
-      <section id="skills-graph">
-        <h2>Habilidades</h2>
-        <div id="modal-otherkill">
-          <img src="images/branding/angularjs.svg" alt="angularjs" class="img-responsive img-rounded col-md-3" title="Angular">
-          <img src="images/branding/es6.svg" alt="es6" class="img-responsive img-rounded col-md-3" title="Ecma Script 6">
-          <img src="images/branding/grunt.svg" alt="grunt" class="img-responsive img-rounded col-md-3" title="Gruntjs">
-          <img src="images/branding/nodejs.svg" alt="nodejs" class="img-responsive img-rounded col-md-3" title="Nodejs">
-          <img src="images/branding/jquery.svg" alt="jquery" class="img-responsive img-rounded col-md-3" title="Jquery">
-          <img src="images/branding/spring.svg" alt="spring" class="img-responsive img-rounded col-md-3" title="Spring MVC">
-          <img src="images/branding/typescript-and-javascript.svg" alt="typescript-and-javascript" class="img-responsive img-rounded col-md-6"
-            title="typescript-and-javascript">
-          <img src="images/branding/postgres.svg" alt="postges" class="img-responsive img-rounded col-md-3" title="postges">
-          <img src="images/branding/cassandra.svg" alt="cassandra" class="img-responsive img-rounded col-md-3" title="cassandra">
+          <div class="row">
+            <div class="columns contact-details">
+              <h2>Contact Details</h2>
+            </div>
+            <div class="columns download">
+              <p>
+                <a href="#about" class="button">
+                  <i class="fa fa-download"></i>Download Resume</a>
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
+    </section>
 
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-  </div>
+    <!-- resume section -->
+    <section id="resume">
+      <!-- Education -->
+      <div class="row education">
+        <div class="three columns header-col">
+          <h1>
+            <span>Education</span>
+          </h1>
+        </div>
 
-  <footer id="lets-connect" class="footer-bg">
-    <h3 class="orange white-text center-text">Let's Connect</h3>
-    <ul id="footerContacts" class="flex-box has-padding">
-    </ul>
+        <div id="education-entries" class="nine columns main-col">
+          <div class="row item">
+            <div class="twelve columns"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--Work-->
+      <div class="row work">
+        <div class="three columns header-col">
+          <h1>
+            <span>Work</span>
+          </h1>
+        </div>
+        <div id="work-entries" class="nine columns main-col"></div>
+      </div>
+
+      <!-- skills -->
+      <div class="row skill">
+
+        <div class="three columns header-col">
+          <h1>
+            <span>Skills</span>
+          </h1>
+        </div>
+
+        <div id="skill-content" class="nine columns main-col">
+          <div class="bars">
+            <ul class="skills"></ul>
+          </div>
+          <!-- end skill-bars -->
+        </div>
+        <!-- main-col end -->
+
+      </div>
+
+    </section>
+
+    <!-- portfolio section -->
+    <section id="portfolio">
+      <div class="row">
+        <div class="twelve columns collapsed">
+          <h1>Check Out Some of My Works.</h1>
+          <!-- portfolio-wrapper -->
+          <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf"></div>
+          <!-- portfolio-wrapper end -->
+        </div>
+        <!-- twelve columns end -->
+      </div>
+    </section>
+
+    <!-- FeedBack section -->
+    <section id="testimonials">
+      <div class="text-container">
+        <div class="row">
+          <div class="two columns header-col">
+            <h1>
+              <span>Client Testimonials</span>
+            </h1>
+          </div>
+          <div class="ten columns flex-container">
+            <div class="flexslider">
+              <ul class="slides"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- text-container ends -->
+    </section>
+  </main>
+
+  <!-- ===========footer============= -->
+  <footer>
+    <div class="row">
+      <div class="twelve columns">
+        <ul class="social-links"></ul>
+        <ul class="copyright">
+          <li>2017 Resume</li>
+          <li>Joelton Matos</li>
+        </ul>
+      </div>
+      <div id="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#home">
+          <i class="icon-up-open"></i>
+        </a>
+      </div>
+    </div>
   </footer>
 
+  <!-- ===============Java Script================= -->
 
-  <!--Jquery Library-->
-  <script src="js/jQuery.js"></script>
+  <!-- theme load and adjustment -->
+  <script src="js/lib/jQuery.js"></script>
+  <script src="js/lib/jquery.flexslider.js"></script>
+  <script src="js/lib/waypoints.js"></script>
+  <script src="js/lib/jquery.fittext.js"></script>
+  <script src="js/lib/magnific-popup.js"></script>
+  <script src="js/lib/typedjs/typed.min.js"></script>
+  <script src="js/init.js"></script>
 
-  <!--Chart.js-->
-  <script src="js/chartjs/Chart.min.js"></script>
-  <!--jquery Moda-->
-  <script src="js/jquery-modal/jquery.modal.min.js"></script>
-
-  <!-- helper.js -->
+  <!-- business logic  -->
   <script src="js/helper.js"></script>
-
-  <!--My resume-->
   <script src="js/resumeBuilder.js"></script>
 
-
-  <!--
-  These scripts are written in JavaScript. You'll be breaking them down as part of
-  a quiz. Essentially, the next few lines are checking to see if you have not
-  changed each section of the resume. If you have not made any changes to a section
-  of the resume, then that part of the resume does not show up. More on this in the
-  course.
-  -->
-
-  <script>
-    if (document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if (document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if (document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if (document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if (document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if (document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    if (document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
 </body>
 
 </html>

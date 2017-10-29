@@ -83,6 +83,7 @@ var HTMLprojectModalLinkBox = '<div class="link-box"><a href="%dataUrl%" target=
 var HTMLtestimonials = '<li><blockquote><p>%dataQuote%.</p><cite>%dataAuthor%</cite></blockquote></li>';
 
 
+<<<<<<< HEAD
 
 //var HTMLprojectTitle = '<a href="#">%data%</a>';
 //var HTMLprojectDates = '<div class="date-text">%data%</div>';
@@ -148,6 +149,28 @@ var HTMLprojectModalLinkBox = '<div class="link-box"><a href="%dataUrl%" target=
 var HTMLtestimonials = '<li><blockquote><p>%dataQuote%.</p><cite>%dataAuthor%</cite></blockquote></li>';
 
 
+/*Online Courser - Not used yet.*/
+>>>>>>> adb945d... implemented version 1.0 resume
+||||||| parent of adb945d... implemented version 1.0 resume
+
+//var HTMLprojectTitle = '<a href="#">%data%</a>';
+//var HTMLprojectDates = '<div class="date-text">%data%</div>';
+//var HTMLprojectDescription = '<p><br>%data%</p>';
+//var HTMLprojectImage = '<img src="%data%" class="col-md-3 projectpic">';
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
 /*Online Courser - Not used yet.*/
 >>>>>>> adb945d... implemented version 1.0 resume
 var HTMLonlineClassesStart = '<div class="online-education-entry"></div>';
