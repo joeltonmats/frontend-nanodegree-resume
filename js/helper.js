@@ -44,33 +44,13 @@ var HTMLprojectModalLinkBox = '<div class="link-box"><a href="%dataUrl%" target=
 var HTMLtestimonials = '<li><blockquote><p>%dataQuote%.</p><cite>%dataAuthor%</cite></blockquote></li>';
 
 
-
-//var HTMLprojectTitle = '<a href="#">%data%</a>';
-//var HTMLprojectDates = '<div class="date-text">%data%</div>';
-//var HTMLprojectDescription = '<p><br>%data%</p>';
-//var HTMLprojectImage = '<img src="%data%" class="col-md-3 projectpic">';
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Online Courser - Not used yet.*/
 var HTMLonlineClassesStart = '<div class="online-education-entry"></div>';
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
-
-var HTMLGraphSkills = '<div class="col-md-10"><canvas id="myChart" width="50" height="14"></canvas></div>';
-var HTMLButtonOthersSkills = '<div class="col-md-2"><button class="btn btn-sm btn-primary" id="btnOtherSkill">Outras Habilidades</button></div>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

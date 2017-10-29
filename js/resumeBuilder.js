@@ -9,18 +9,6 @@ function typedBanner(welcomeMessageArray) {
     });
 }
 
-function getModalOthersSkills() {
-    $('#btnOtherSkill').click(function (event) {
-        $("#modal-otherkill").show();
-        $("#modal-otherkill").modal({
-            fadeDuration: 300,
-            fadeDelay: 1.75
-        });
-
-        return false;
-    });
-};
-
 var bio = {
     name: 'Joelton Matos',
     role: 'Web Developer',
@@ -142,7 +130,7 @@ var education = {
         var educationSchools = education.schools;
         var educationOnCourses = education.onlineCourses;
 
-        $('#education-entries').append(HTMLschoolStart/* , HTMLonlineClasses, HTMLonlineClassesStart */);
+        $('#education-entries').append(HTMLschoolStart);
 
         // school
         educationSchools.forEach(function (school) {
@@ -152,16 +140,6 @@ var education = {
                 HTMLschoolDetails.replace('%data%', school.details)
             );
         });
-
-        /*   // online class
-          educationOnCourses.forEach(function (onCourse) {
-              $('.online-education-entry:last').append(
-                  HTMLonlineTitle.replace('%data%', onCourse.title),
-                  HTMLschoolDegree.replace('%data%', onCourse.school),
-                  HTMLonlineDates.replace('%data%', onCourse.dates),
-                  HTMLonlineURL.replace('%data%', onCourse.url),
-              );
-          }) */
     }
 }
 
@@ -213,6 +191,14 @@ var projects = {
         },
         {
             'id': 2,
+            'title': 'Evo System',
+            'date': "Oct 2016" + "-" + "Jan 2017",
+            'description': 'Web system to customers payments management . I was part of the team as Fullstack developer',
+            'images': ['images/portfolio/evo.jpg', 'images/portfolio/modals/evo.jpg'],
+            'link': 'http://45.79.194.183/SaudeDescontoSystem/comuns/paginaPrincipal.jsf'
+        },
+        {
+            'id': 3,
             'title': 'Bass',
             'date': "Jan 2017",
             'description': 'Overview Bass',
@@ -220,7 +206,15 @@ var projects = {
             'link': 'https://thimbleprojects.org/joeltonmatos/331387/'
         },
         {
-            'id': 3,
+            'id': 4,
+            'title': 'New Saude System',
+            'date': "Dez 2015" + "-" + "Jan 2017",
+            'description': 'Migration from old sytem to current technologies. I was part of the team as Fullstack developer',
+            'images': ['images/portfolio/newsaude.jpg', 'images/portfolio/modals/newsaude.jpg'],
+            'link': 'https://goo.gl/cHJEz6'
+        },
+        {
+            'id': 5,
             'title': 'Schedule',
             'date': "Jan 2017",
             'description': 'Overview Schedule',
@@ -228,7 +222,15 @@ var projects = {
             'link': 'https://thimbleprojects.org/joeltonmatos/331383/'
         },
         {
-            'id': 4,
+            'id': 6,
+            'title': 'Samel Scheduling Module',
+            'date': "Fev 2017" + "-" + "Jun 2017",
+            'description': 'Module Development to support schedules. I was part of the team as Front-end developer',
+            'images': ['images/portfolio/samel.jpg', 'images/portfolio/modals/samel.jpg'],
+            'link': 'http://agendamento.samel.com.br/STANDARD/#/login/signin'
+        },
+        {
+            'id': 7,
             'title': 'Adoptly',
             'date': "Jan 2017",
             'description': 'Overview Best Bite',
@@ -236,23 +238,14 @@ var projects = {
             'link': 'https://thimbleprojects.org/joeltonmatos/331330/'
         },
         {
-            'id': 5,
-            'title': 'New Saude System',
-            'date': "Jan 2016" + "-" + "Jun 2016",
-            'description': 'New Version of Saude System Web',
-            'images': ['https://www.advsol.com/ASI/images/NewSite/Devices/three_device_image.png',
-                'https://thenextweb.com/wp-content/blogs.dir/1/files/2013/09/customers.png'
-            ],
-            'link': 'https://thimbleprojects.org/joeltonmatos/331395/'
+            'id': 8,
+            'title': 'Headlines',
+            'date': "Jun 2017",
+            'description': 'Overview Headlines',
+            'images': ['images/portfolio/headlines.jpg', 'images/portfolio/modals/headlines.jpg'],
+            'link': 'https://thimbleprojects.org/joeltonmatos/344060/'
         },
-        {
-            'id': 6,
-            'title': 'New Odonto System',
-            'date': "Oct 2016" + "-" + "Jan 2017",
-            'description': 'New Version of Odonto System Web',
-            'images': ['https://www.webtrade.ie/_fileupload/Image/1_cms-image.png', 'http://s2.dmcdn.net/GIyzb/1280x720-S0R.jpg'],
-            'link': 'https://thimbleprojects.org/joeltonmatos/331395/'
-        },
+
 
     ],
     display: function () {
@@ -276,7 +269,6 @@ var projects = {
                     .replace('%dataTitle%', project.title)
                     .replace('%dataDescription%', project.description)
             );
-
 
 
             // build modals in background
@@ -311,28 +303,12 @@ var myTestimonials = {
     }
 }
 
-
-function inName(name) {
-    var newName;
-    var nameArray = name.split(" ");
-    nameArray
-
-    nameArray[0] = nameArray[0].slice(0, 1).toUpperCase() + nameArray[0].slice(1).toLowerCase();
-    nameArray[1] = nameArray[1].toUpperCase();
-    newName = nameArray.join(" ");
-
-    return newName;
-
-}
-
 function begin() {
     bio.display();
     education.display();
     work.display();
     projects.display();
     myTestimonials.display();
-    /*
-    getModalOthersSkills(); */
 }
 
 
