@@ -40,6 +40,7 @@ function typedBanner(welcomeMessageArray) {
     });
 }
 
+<<<<<<< HEAD
 function getModalOthersSkills() {
     $('#btnOtherSkill').click(function (event) {
         $("#modal-otherkill").show();
@@ -64,6 +65,21 @@ function typedBanner(welcomeMessageArray) {
     });
 }
 
+>>>>>>> adb945d... implemented version 1.0 resume
+||||||| parent of adb945d... implemented version 1.0 resume
+function getModalOthersSkills() {
+    $('#btnOtherSkill').click(function (event) {
+        $("#modal-otherkill").show();
+        $("#modal-otherkill").modal({
+            fadeDuration: 300,
+            fadeDelay: 1.75
+        });
+
+        return false;
+    });
+};
+
+=======
 >>>>>>> adb945d... implemented version 1.0 resume
 var bio = {
     name: 'Joelton dos Santos Matos',
@@ -145,7 +161,13 @@ var education = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $('#education').append(HTMLschoolStart, HTMLonlineClasses, HTMLonlineClassesStart);
+||||||| parent of adb945d... implemented version 1.0 resume
+        $('#education-entries').append(HTMLschoolStart/* , HTMLonlineClasses, HTMLonlineClassesStart */);
+=======
+        $('#education-entries').append(HTMLschoolStart);
+>>>>>>> adb945d... implemented version 1.0 resume
 ||||||| parent of adb945d... implemented version 1.0 resume
         $('#education-entries').append(HTMLschoolStart/* , HTMLonlineClasses, HTMLonlineClassesStart */);
 =======
@@ -169,6 +191,7 @@ var education = {
         });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // online class
         educationOnCourses.forEach(function (onCourse) {
@@ -179,6 +202,19 @@ var education = {
                 HTMLonlineURL.replace('%data%', onCourse.url),
             );
         })
+||||||| parent of adb945d... implemented version 1.0 resume
+
+        /*   // online class
+          educationOnCourses.forEach(function (onCourse) {
+              $('.online-education-entry:last').append(
+                  HTMLonlineTitle.replace('%data%', onCourse.title),
+                  HTMLschoolDegree.replace('%data%', onCourse.school),
+                  HTMLonlineDates.replace('%data%', onCourse.dates),
+                  HTMLonlineURL.replace('%data%', onCourse.url),
+              );
+          }) */
+=======
+>>>>>>> adb945d... implemented version 1.0 resume
 ||||||| parent of adb945d... implemented version 1.0 resume
 
         /*   // online class
@@ -328,6 +364,7 @@ var projects = {
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             'id': 5,
             'title': 'New Saude System',
             'date': "Jan 2016" + "-" + "Jun 2016",
@@ -433,10 +470,40 @@ var projects = {
             'images': ['images/portfolio/headlines.jpg', 'images/portfolio/modals/headlines.jpg'],
             'link': 'https://thimbleprojects.org/joeltonmatos/344060/'
 >>>>>>> adb945d... implemented version 1.0 resume
+||||||| parent of adb945d... implemented version 1.0 resume
+            'id': 5,
+            'title': 'New Saude System',
+            'date': "Jan 2016" + "-" + "Jun 2016",
+            'description': 'New Version of Saude System Web',
+            'images': ['https://www.advsol.com/ASI/images/NewSite/Devices/three_device_image.png',
+                'https://thenextweb.com/wp-content/blogs.dir/1/files/2013/09/customers.png'
+            ],
+            'link': 'https://thimbleprojects.org/joeltonmatos/331395/'
+        },
+        {
+            'id': 6,
+            'title': 'New Odonto System',
+            'date': "Oct 2016" + "-" + "Jan 2017",
+            'description': 'New Version of Odonto System Web',
+            'images': ['https://www.webtrade.ie/_fileupload/Image/1_cms-image.png', 'http://s2.dmcdn.net/GIyzb/1280x720-S0R.jpg'],
+            'link': 'https://thimbleprojects.org/joeltonmatos/331395/'
+=======
+            'id': 8,
+            'title': 'Headlines',
+            'date': "Jun 2017",
+            'description': 'Overview Headlines',
+            'images': ['images/portfolio/headlines.jpg', 'images/portfolio/modals/headlines.jpg'],
+            'link': 'https://thimbleprojects.org/joeltonmatos/344060/'
+>>>>>>> adb945d... implemented version 1.0 resume
         },
 
+<<<<<<< HEAD
 
 
+||||||| parent of adb945d... implemented version 1.0 resume
+=======
+
+>>>>>>> adb945d... implemented version 1.0 resume
     ],
     display: function () {
 
@@ -468,8 +535,13 @@ var projects = {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of adb945d... implemented version 1.0 resume
 
+||||||| parent of adb945d... implemented version 1.0 resume
+
+=======
+>>>>>>> adb945d... implemented version 1.0 resume
 ||||||| parent of adb945d... implemented version 1.0 resume
 
 =======
@@ -524,6 +596,24 @@ function inName(name) {
 
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> adb945d... implemented version 1.0 resume
+||||||| parent of adb945d... implemented version 1.0 resume
+
+function inName(name) {
+    var newName;
+    var nameArray = name.split(" ");
+    nameArray
+
+    nameArray[0] = nameArray[0].slice(0, 1).toUpperCase() + nameArray[0].slice(1).toLowerCase();
+    nameArray[1] = nameArray[1].toUpperCase();
+    newName = nameArray.join(" ");
+
+    return newName;
+
+}
+
 =======
 >>>>>>> adb945d... implemented version 1.0 resume
 ||||||| parent of adb945d... implemented version 1.0 resume
@@ -561,6 +651,12 @@ function begin() {
     getModalOthersSkills(); */
 =======
     myTestimonials.display();
+<<<<<<< HEAD
+>>>>>>> adb945d... implemented version 1.0 resume
+||||||| parent of adb945d... implemented version 1.0 resume
+    /*
+    getModalOthersSkills(); */
+=======
 >>>>>>> adb945d... implemented version 1.0 resume
 ||||||| parent of adb945d... implemented version 1.0 resume
     /*
