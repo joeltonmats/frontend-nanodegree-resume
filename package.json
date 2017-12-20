@@ -1,0 +1,42 @@
+{
+  "name": "udacity-frontend-nanodegree-resume",
+  "version": "1.0.0",
+  "description": "This is a project from Udacity Nanogree Front End",
+  "main": "index.js",
+  "scripts": {
+    "start": "grunt production && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeltonmats/udacity-frontend-nanodegree-resume.git"
+  },
+  "keywords": [
+    "front-end",
+    "resume"
+  ],
+  "author": "Joelton Matos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeltonmats/udacity-frontend-nanodegree-resume/issues"
+  },
+  "homepage": "https://github.com/joeltonmats/udacity-frontend-nanodegree-resume#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-uglify": "latest",
+    "grunt-critical": "^1.1.0",
+    "grunt-pagespeed": "^2.0.1",
+    "grunt-replace": "^1.0.1",
+    "load-grunt-tasks": "^3.5.2",
+    "ngrok": "^2.2.23"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "express": "^4.16.2"
+  }
+}
