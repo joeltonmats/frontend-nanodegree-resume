@@ -21,7 +21,7 @@ var HTMLAddress = '<p class="address"><span>%dataName%</span><br><span>%dataDist
 var HTMLschoolStart = '<div class="row item education-entry"><div class="twelve columns"></div></div>';
 var HTMLschoolName = ' <h3><a href="%dataUrl%" target="_blank">%data%</a></h3>';
 var HTMLschoolDegree = '<p class="info">%data% <span>&bull;</span> <em class="date">%dataDate%</em></p>';
-var HTMLschoolDetails = '<p>%data%</p>'
+var HTMLschoolDetails = '<p>%data%</p>';
 
 //Work
 var HTMLworkStart = '<div class="row item work-entry"><div class="twelve columns"></div></div>';
@@ -36,7 +36,7 @@ var HTMLskills = ' <li><span class="bar-expand %dataSkillClass%"></span><em>%dat
 //Project
 var HTMLprojectStart = '<div class="columns portfolio-item"><div class="item-wrap" ><a href="#%dataModalId%" title="%dataLinkDescription%" id="%dataLinkId%"><img alt="%dataImageDescription%" src="%dataImage%"></a></div></div>';
 var HTMLprojectContent = '<div class="overlay"><div class="portfolio-item-meta"><h5>%dataTitle%</h5><p>%dataDescription%<tiz/p></div></div><div class="link-icon"><i class="icon-plus"></i></div>';
-var HTMLprojectModalStart = '<div id="%dataId%" class="popup-modal mfp-hide"><img class="scale-with-grid" src="%dataImage%" alt=""/></div>'
+var HTMLprojectModalStart = '<div id="%dataId%" class="popup-modal mfp-hide"><img class="scale-with-grid" src="%dataImage%" alt=""/></div>';
 var HTMLprojectModalDescriptionBox = '<div class="description-box"><h4>%dataTitle%</h4><p>%dataDescription%</p><span class="categories"><i class="fa fa-tag"></i>Development, Front-end</span></div>';
 var HTMLprojectModalLinkBox = '<div class="link-box"><a href="%dataUrl%" target="_blank">Details</a><a class="popup-modal-dismiss">Close</a></div>';
 
@@ -103,7 +103,351 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    disableDefaultUI: true,
+    styles: [
+      {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "5"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "saturation": "0"
+          },
+          {
+            "lightness": "30"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "30"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          },
+          {
+            "visibility": "on"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.province",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "20"
+          },
+          {
+            "weight": "1.00"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.locality",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "lightness": "-20"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "lightness": "-20"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          }
+        ]
+      },
+      {
+        "featureType": "landscape",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "30"
+          }
+        ]
+      },
+      {
+        "featureType": "landscape",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "30"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "on"
+          },
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.attraction",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.business",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.government",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.medical",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.place_of_worship",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.school",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.sports_complex",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "color": "#9e394d"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "visibility": "simplified"
+          },
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "15"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "6"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "color": "#1e242b"
+          },
+          {
+            "lightness": "30"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#010306"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      }
+    ]
   };
 
   /*
@@ -173,7 +517,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function () {
-      // your code goes here!
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -230,16 +574,12 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
-
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function (e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+  map.fitBounds(mapBounds);
+});

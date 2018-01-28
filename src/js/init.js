@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
     $(window).on('resize', function () {
 
         $('header').css({ 'height': $(window).height() });
-        $('body').css({ 'width': $(window).width() })
+        $('body').css({ 'width': $(window).width() });
     });
 
 
@@ -83,11 +83,11 @@ jQuery(document).ready(function ($) {
         var y = $(window).scrollTop();
         var nav = $('#nav-wrap');
 
-        if ((y > h * .20) && (y < h) && ($(window).outerWidth() > 768)) {
+        if ((y > h * 0.20) && (y < h) && ($(window).outerWidth() > 768)) {
             nav.fadeOut('fast');
         }
         else {
-            if (y < h * .20) {
+            if (y < h * 0.20) {
                 nav.removeClass('opaque').fadeIn('fast');
             }
             else {

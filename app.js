@@ -1,16 +1,16 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const bodyParser = require('body-parser');
-const compression = require('compression')
+var express = require('express');
+var path = require('path');
+var app = express();
+var bodyParser = require('body-parser');
+var compression = require('compression');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(compression())
+app.use(compression());
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('*', (req, res) => {
+app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 

@@ -331,6 +331,70 @@ ul#nav li.current a {
 }
 
 
+/* ------------------------------ Location Section------------------------------------ */
+
+#location {
+    background: #fff;
+    padding-top: 90px;
+    padding-bottom: 72px;
+    overflow: hidden;
+}
+
+#location a,
+#location a:visited {
+    color: #313131;
+}
+
+#location a:hover,
+#location a:focus {
+    color: #11ABB0;
+}
+
+#location h1 {
+    font: 18px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#location h1 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+}
+
+#location h3 {
+    font: 25px/30px 'opensans-bold', sans-serif;
+}
+
+#location .header-col {
+    padding-top: 9px;
+}
+
+#location .main-col {
+    padding-right: 10%;
+}
+
+#location .info {
+    font: 16px/24px 'librebaskerville-italic', serif;
+    color: #6E7881;
+    margin-bottom: 18px;
+    margin-top: 9px;
+}
+
+#location .info span {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#location h1 span {
+    line-height: 40px;
+}
+
+#location .date {
+    font: 15px/24px 'opensans-regular', sans-serif;
+    margin-top: 6px;
+}
+
+
 /* ------------------------------ Skill Bars ------------------------------------ */
 
 .bars {
@@ -1138,4 +1202,16 @@ footer .social-links li:first-child {
 
 #go-top a:hover {
     background-color: #0F9095;
+}
+
+#map {
+    display: block;
+    height: 100%;
+    margin: 0 5%;
+}
+
+#mapDiv {
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
 }

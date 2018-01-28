@@ -22,15 +22,9 @@ var bio = {
         mobile: '+55 92 91358952',
         email: 'joeltonmatos@gmail.com',
         github: 'https://github.com/joeltonmats',
-        location: 'https://goo.gl/5fKeiM'
+        location: 'Campinas-SP'
     },
-    welcomeMessages: [
-        'and I love to build web applications.',
-        'and I love to build landing pages.',
-        'and I love Web development.',
-        'and I love coding.',
-        'and I love team work.',
-    ],
+    welcomeMessage: 'and I love to build web applications., and I love to build landing pages., and I love Web development., and I love coding., and I love team work.,',
     skillsIntroduction: 'I like to work as front-end developer using html5, css3, javascrpt and some its frameworks. In the back-end using java and nodejs.',
     skills: ["HTML5", "CSS", "Javascript", "jQuery", "Bootstrap", "Java"],
     biopic: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/000/1fc/211/06189d5.jpg',
@@ -39,16 +33,19 @@ var bio = {
         city: 'Campinas',
         state: 'SP',
         district: 'Barão Geraldo',
-        country: 'Brasil'
+        country: 'Brazil'
     },
     display: function () {
 
         // Banner
+
+        var welcomeMessages = bio.welcomeMessage.split(',');
+
         $('.banner-text').prepend(
             HTMLheaderName.replace('%data%', bio.name),
-            HTMLheaderRole.replace('%dataRole%', bio.role).replace('%dataWelcome%', bio.welcomeMessages[0]));
+            HTMLheaderRole.replace('%dataRole%', bio.role).replace('%dataWelcome%', welcomeMessages[0]));
 
-        typedBanner(bio.welcomeMessages);
+        typedBanner(welcomeMessages);
 
         //Banner Social
         $('.banner-text .social').append(
@@ -77,10 +74,9 @@ var bio = {
         //skills
         if (bio.skills.length > 0) {
             $('#skill-content').prepend(HTMLskillsStart.replace('%data%', bio.skillsIntroduction));
-            for (var index = 0; index < bio.skills.length; index++) {
-                var skill = bio.skills[index];
+            bio.skills.forEach(function (skill) {
                 $('.skills').append(HTMLskills.replace('%dataSkillClass%', skill.toLowerCase()).replace('%dataSkill%', skill.toUpperCase()));
-            }
+            });
         }
 
         // social footer
@@ -93,6 +89,9 @@ var bio = {
             HTMLSkype.replace('%urlValue%', bio.contacts.skype),
             HTMLgithub.replace('%urlValue%', bio.contacts.github)
         );
+
+        // google maps
+        $('#mapDiv').append(googleMap);
     }
 };
 
@@ -141,7 +140,7 @@ var education = {
             );
         });
     }
-}
+};
 
 var work = {
     'jobs': [
@@ -149,21 +148,21 @@ var work = {
             'employer': 'Venturus',
             'title': 'Junior Analyst Developer',
             'location': 'Campinas-SP',
-            'date': "Currently",
+            'dates': "Currently",
             'description': 'Web development using Java, HTML5, CSS3 and Javascript. Also, simple features using typescript, angualar4 and project inovation set up with Apache Cassandra, Spark Streaming and Java 8.'
         },
         {
             'employer': 'Medic Lab - Medic Center',
             'title': 'Web Developer',
             'location': 'Manaus-AM',
-            'date': "Jan 2014" + " - " + "Jan 2017",
+            'dates': "Jan 2014" + " - " + "Jan 2017",
             'description': 'Front-end Development using html5, css3, javacript and frameworks like bootstrap and angularJs. Also, development and maintenance systems using Java Server Faces and hibernate. Creating queries, functions and views in SGBD. Analysis and requirements surveys for new business rules.'
         },
         {
             'employer': 'Court of Accounts of the State of the Amazonas',
             'title': 'Intern',
             'location': 'Manaus-AM',
-            'date': "Mar 2013" + " - " + "Jan 2014",
+            'dates': "Mar 2013" + " - " + "Jan 2014",
             'description': 'Software Development with Frameworks Java Server Faces 2, Struts 2 and queries with SGBD PostegreSql.'
         },
     ],
@@ -172,7 +171,7 @@ var work = {
             $('#work-entries').append(HTMLworkStart);
             $('.work-entry .twelve:last').append(
                 HTMLworkEmployer.replace('%data%', job.employer),
-                HTMLworkTitle.replace('%data%', job.title).replace('%dataDate%', job.date),
+                HTMLworkTitle.replace('%data%', job.title).replace('%dataDate%', job.dates),
                 HTMLworkDescription.replace('%data%', job.description)
             );
         });
@@ -184,7 +183,7 @@ var projects = {
         {
             'id': 1,
             'title': 'Best Bite',
-            'date': "Jan 2017",
+            'dates': "Jan 2017",
             'description': 'Overview Best Bite',
             'images': ['images/portfolio/bestbite-min.jpg', 'images/portfolio/modals/bestbite.jpg'],
             'link': 'https://thimbleprojects.org/joeltonmatos/331395/'
@@ -192,7 +191,7 @@ var projects = {
         {
             'id': 2,
             'title': 'Evo System',
-            'date': "Oct 2016" + "-" + "Jan 2017",
+            'dates': "Oct 2016" + "-" + "Jan 2017",
             'description': 'Web system to customers payments management . I was part of the team as Fullstack developer',
             'images': ['images/portfolio/evo-min.jpg', 'images/portfolio/modals/evo.jpg'],
             'link': 'http://45.79.194.183/SaudeDescontoSystem/comuns/paginaPrincipal.jsf'
@@ -200,7 +199,7 @@ var projects = {
         {
             'id': 3,
             'title': 'Bass',
-            'date': "Jan 2017",
+            'dates': "Jan 2017",
             'description': 'Overview Bass',
             'images': ['images/portfolio/bass-min.jpg', 'images/portfolio/modals/bass.jpg'],
             'link': 'https://thimbleprojects.org/joeltonmatos/331387/'
@@ -208,7 +207,7 @@ var projects = {
         {
             'id': 4,
             'title': 'New Saude System',
-            'date': "Dez 2015" + "-" + "Jan 2017",
+            'dates': "Dez 2015" + "-" + "Jan 2017",
             'description': 'Migration from old sytem to current technologies. I was part of the team as Fullstack developer',
             'images': ['images/portfolio/newsaude-min.jpg', 'images/portfolio/modals/newsaude.jpg'],
             'link': 'https://goo.gl/cHJEz6'
@@ -216,7 +215,7 @@ var projects = {
         {
             'id': 5,
             'title': 'Schedule',
-            'date': "Jan 2017",
+            'dates': "Jan 2017",
             'description': 'Overview Schedule',
             'images': ['images/portfolio/schedule-min.jpg', 'images/portfolio/modals/schedule.jpg'],
             'link': 'https://thimbleprojects.org/joeltonmatos/331383/'
@@ -224,7 +223,7 @@ var projects = {
         {
             'id': 6,
             'title': 'Samel Scheduling Module',
-            'date': "Fev 2017" + "-" + "Jun 2017",
+            'dates': "Fev 2017" + "-" + "Jun 2017",
             'description': 'Module Development to support schedules. I was part of the team as Front-end developer',
             'images': ['images/portfolio/samel-min.jpg', 'images/portfolio/modals/samel.jpg'],
             'link': 'http://agendamento.samel.com.br/STANDARD/#/login/signin'
@@ -232,7 +231,7 @@ var projects = {
         {
             'id': 7,
             'title': 'Adoptly',
-            'date': "Jan 2017",
+            'dates': "Jan 2017",
             'description': 'Overview Best Bite',
             'images': ['images/portfolio/adoptly-min.jpg', 'images/portfolio/modals/adoptly.jpg'],
             'link': 'https://thimbleprojects.org/joeltonmatos/331330/'
@@ -240,7 +239,7 @@ var projects = {
         {
             'id': 8,
             'title': 'Headlines',
-            'date': "Jun 2017",
+            'dates': "Jun 2017",
             'description': 'Overview Headlines',
             'images': ['images/portfolio/headlines-min.jpg', 'images/portfolio/modals/headlines.jpg'],
             'link': 'https://thimbleprojects.org/joeltonmatos/344060/'
@@ -301,7 +300,7 @@ var myTestimonials = {
             );
         });
     }
-}
+};
 
 function begin() {
     bio.display();
